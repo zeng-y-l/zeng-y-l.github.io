@@ -1,0 +1,95 @@
+@import './design.styl'
+
+.main :global
+  // 触发margin合并
+  margin calc(3vw + 45px) calc(25vw - 60px) calc(4vw + 60px)
+
+  h1, h2, h3, h4, h5, h6
+    margin 1.5em 0 1em 0
+
+  p
+    line-height 1.7
+    vmargin 1em
+
+  .md-table
+    width 100%
+    white-space nowrap
+    overflow auto
+    vmargin 1.5rem
+
+    table
+      min-width 100%
+      border-collapse collapse
+
+      thead
+      tr:nth-child(even)
+        bg-color 0.97
+
+      th, td, thead
+        padding 0.5rem 0.8rem
+        border 1px solid
+        bd-color border-color
+      thead
+        border-bottom-width 0.15rem
+
+  // code
+  code-block = 'div[class*="language-"]'
+  code-inline = 'code:not(pre code)'
+
+  {code-block}, {code-inline}
+    font-size 0.9em
+    border solid 1px
+    bd-color border-color
+    bg-color 0.98
+
+  {code-inline}
+    border-radius 0.2em
+    padding 0.05em 0.25em
+
+  {code-block}
+    border-radius 0.5em
+    position relative
+    vmargin 1.5rem
+
+    // 额外
+    hover-op(c, a)
+      fork '../:hover ^[-1..-1]' opacity c a
+
+    > button.copy
+    > span.lang
+      position absolute
+      transition opacity 0.2s
+
+    > button.copy
+      hover-op 1 0
+      right 0.6rem
+      top 0.6rem
+
+      width 2rem
+      height 2rem
+      bg-icon 1rem
+      fork '&.copied' background-image icon-copied icon-copy
+
+      border-radius 0.3em
+      border none
+      cursor pointer
+      bg-color 0.9
+
+    > span.lang
+      font-size 0.6rem
+      txt-color 0.6
+
+      hover-op 0 1
+      right 0.5rem
+      top 0.2rem
+
+    // 内容
+    > pre
+      padding 1em
+      overflow auto
+
+    > pre.vp-code-
+      &dark
+        theme display none block
+      &light
+        theme display block none

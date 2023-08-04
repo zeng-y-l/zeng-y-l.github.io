@@ -1,0 +1,22 @@
+@import './design.styl'
+
+.header
+  box-sizing border-box
+  min-height calc(25vw + 200px)
+  padding 95px calc(15vw - 25px)
+  flex-center column main-axis cross-axis
+
+  font-size calc(2vw + 16px) // 若使用heading-size则手机字太大
+  bg-color 0.94
+
+.title
+  font-size 2em
+  &:not(:last-child)
+    margin-bottom 0.4em
+
+.info
+  txt2-color()
+  font-size calc(0.2em + 0.6rem)
+  margin-top 0.5em
+  &:last-child
+    margin-bottom -0.6em // 避免下方留白过多

@@ -1,0 +1,34 @@
+fork(selector, attr, consequent, alternative)
+  {attr} alternative
+  {selector}
+    {attr} consequent
+
+vmargin(size)
+  margin size 0
+
+bg-style-txt()
+  background arguments // background必须在前面
+  -webkit-background-clip text
+  background-clip text
+  color transparent
+
+flex-center()
+  display flex
+  align-items center if cross-axis in arguments
+  justify-content center if main-axis in arguments
+  flex-direction column if column in arguments
+
+font-face-of(name, fonts, block = {})
+  local-fonts = 'local("' + join('"), local("', fonts) + '")'
+  @font-face
+    font-family name
+    src unquote(local-fonts)
+    {block}
+
+bg-icon(size)
+  background-position 50%
+  background-size size
+  background-repeat no-repeat
+
+// concat(l1, l2, sep = ',')
+//   convert(join(sep, l1) + sep + join(sep, l2))

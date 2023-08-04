@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "stylus": "^0.59.0",
+    "vitepress": "1.0.0-beta.3"
+  },
+  "dependencies": {
+    "feed": "^4.2.2",
+    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-ruby": "^0.1.1",
+    "markdown-it-underline": "^1.0.1",
+    "rambda": "^8.1.0",
+    "vue": "^3.3.4"
+  }
+}

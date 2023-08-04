@@ -1,0 +1,29 @@
+@import 'design.styl'
+
+ul.list
+  list-style '» '
+  padding 0
+  padding-left 0.6em
+  vmargin 1.5rem
+
+  > li
+    &::marker
+      font-weight normal
+      gray-color()
+
+    a:not(:hover)
+      color inherit
+
+    &
+    > p:first-child
+      heading()
+      heading-size 10
+
+    > p:first-child
+      margin 0
+
+    .small
+    > p:not(:first-child)
+      txt2-color()
+      font-size calc(0.3em + 0.4rem)
+      font-weight normal

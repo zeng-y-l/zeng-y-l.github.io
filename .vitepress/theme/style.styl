@@ -1,0 +1,80 @@
+@import '../../lib/design.styl'
+
+*
+  margin 0
+  padding 0
+
+font-face-of(FullWidth, font-sans-han, {
+  unicode-range: fullwidth-range,
+})
+
+font-face-of(ItalicHan, font-italic-han, {
+  font-style: italic,
+})
+
+font-face-of(FullWidthItalic, font-italic-han, {
+  unicode-range: fullwidth-range,
+  font-style: italic,
+})
+
+html
+  scroll-behavior smooth
+
+  line-height 1.4
+  word-wrap break-word
+  text-align justify
+  tab-size 4
+
+  font-size calc(18px + 0.2vw)
+  font-family FullWidth, font-sans-mac, font-sans-eng, font-sans-han
+
+body // 不用HTML，避免dark下的问题
+  bg-color 1
+  txt-color 1
+
+a
+  fork '&:hover' text-decoration underline none
+  theme color #03F #8CF
+  &:visited // theme无法用fork
+    theme color #60E #CBF
+
+h1, h2, h3, h4, h5, h6
+  heading()
+
+for size, i in 17 13 9 6 3 1
+  h{i + 1}
+    heading-size size
+
+hr
+  vmargin 2rem
+  height 0.15rem
+  border none
+  bd-color background-color
+
+u
+  text-decoration underline 0.1em
+  &[title]
+    cursor help
+    text-decoration-style dashed
+
+em
+  font-style italic
+  font-family FullWidthItalic, FullWidth, font-italic-eng, ItalicHan, font-sans-mac, font-sans-eng, font-sans-han
+
+pre, code, var, kbd, samp
+  font-family FullWidth, font-mono-eng, font-sans-mac, font-sans-han
+
+ul, ol
+  vmargin 1rem
+  padding-left 1rem
+  > li
+    vmargin 0.4em
+
+blockquote
+  vmargin 1.5rem
+  padding 0 1rem
+  border-left solid 0.25rem
+  bd-color border-left-color
+
+img
+  max-width 100%

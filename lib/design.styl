@@ -1,0 +1,49 @@
+@import './utils.styl'
+
+font-italic-han = "KaiTi", "STKaiti", "STFangSong", "FangSong"
+
+font-italic-eng = "Times New Roman", "Cambria", "Georgia"
+
+font-sans-mac = "-apple-system", "BlinkMacSystemFont"
+
+font-sans-han = "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif
+
+font-sans-eng = "Inter", "Roboto", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica"
+
+font-mono-eng = "Menlo", "Hack", "Jetbrains Mono", "Source Code Pro", "Fira Code", "Cascadia Code", "Consolas", monospace
+
+icon-copy = url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(128,128,128,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2'/%3E%3C/svg%3E")
+
+icon-copied = url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='20' width='20' stroke='rgba(128,128,128,1)' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9 2 2 4-4'/%3E%3C/svg%3E")
+
+fullwidth-range = U+201C-201D /* “” */, U+2018-2019 /* ‘’ */, U+2014 /* — */, U+2026 /* … */
+
+theme(attr, light, dark)
+  sel = 'html[class~="dark"] &' // 可以适应module、scoped
+  fork sel attr dark light
+
+blend-color(attr, t, lt, lb, dt, db)
+  theme attr blend(alpha(lt, t), lb) blend(alpha(dt, t), db)
+
+txt-color(t, attr = 'color')
+  blend-color attr t #222 #EFC #EEE #214
+
+bg-color(t, attr = 'background-color')
+  blend-color attr t #F9F8F0 #652 #223 #EDF
+
+bd-color(attr)
+  bg-color 0.7 attr
+
+gray-color(attr = 'color')
+  txt-color 0.5 attr
+
+txt2-color(attr = 'color')
+  txt-color 0.7 attr
+
+heading()
+  font-weight bold
+  line-height 1.2
+  text-align left
+
+heading-size(size)
+  font-size 'calc(%s + %s)' % (size * 0.1vw size * 0.01rem + 1rem)
