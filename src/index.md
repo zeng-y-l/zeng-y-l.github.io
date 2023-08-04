@@ -39,7 +39,7 @@ titleTemplate: false
 </script>
 
 <style lang="stylus" module>
-  @import '../lib/design.styl';
+  @import '../lib/design.styl'
 
   .head
     margin-bottom 0.1em
