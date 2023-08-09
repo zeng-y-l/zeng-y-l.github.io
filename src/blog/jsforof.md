@@ -239,19 +239,15 @@ for(let v of iterable) {
 `yield*`则是直接使用另一个可迭代对象的迭代器。  
 如下两个相当（也许不同，望指正）：
 
-<div class="row"><div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
 ```js
 yield* sth;
 ```
-</div><div class="col-xs-12col-sm-6 col-md-6 col-lg-6">
 
 ```js
 for(let v of sth) {
     yield v;
 }
 ```
-</div></div>
 
 因此那一例还可以写作：
 

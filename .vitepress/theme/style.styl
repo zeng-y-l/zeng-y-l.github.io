@@ -57,7 +57,7 @@ u
     cursor help
     text-decoration-style dashed
 
-em
+em, .italic
   font-style italic
   font-family FullWidthItalic, FullWidth, font-italic-eng, ItalicHan, font-sans-mac, font-sans-eng, font-sans-han
 
@@ -78,3 +78,24 @@ blockquote
 
 img
   max-width 100%
+
+.table
+  width 100%
+  white-space nowrap
+  overflow auto
+  vmargin 1.5rem
+
+  table
+    min-width 100%
+    border-collapse collapse
+
+    thead
+    tr:nth-child(even)
+      bg-color 0.97
+
+    th, td, thead
+      padding 0.5rem 0.8rem
+      border 1px solid
+      bd-color border-color
+    thead
+      border-bottom-width 0.15rem

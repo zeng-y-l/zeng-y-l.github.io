@@ -12,9 +12,8 @@ const { frontmatter, page } = useData()
 const information = computed(() => {
   const { create, update } = frontmatter.value
   return [
-    [frontmatter.value.desc],
     [all`创建于 ${date(create)}`, all`最后修改于 ${date(update)}`],
-  ].map(x => connect(x, '，')).filter(x => x != '')
+  ].map(x => connect(x, '，'))
 })
 </script>
 
@@ -29,6 +28,7 @@ const information = computed(() => {
     <header :class="header.header">
       <h1 :class="header.title">{{ frontmatter.title }}</h1>
       <div :class="header.info" v-for="info in information">{{ info }}</div>
+      <p :class="[header.info, 'italic']">{{ frontmatter.desc }}</p>
     </header>
 
     <main :class="main.main">

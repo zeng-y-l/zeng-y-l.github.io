@@ -18,11 +18,15 @@ flex-center()
   justify-content center if main-axis in arguments
   flex-direction column if column in arguments
 
+map-comma(list, f)
+  res = f(list[0])
+  res = res, f(el) for el in slice(list, 1)
+  res
+
 font-face-of(name, fonts, block = {})
-  local-fonts = 'local("' + join('"), local("', fonts) + '")'
   @font-face
     font-family name
-    src unquote(local-fonts)
+    src map-comma(fonts, @(font){'local(%s)' % font})
     {block}
 
 bg-icon(size)

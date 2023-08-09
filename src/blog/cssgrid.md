@@ -30,7 +30,7 @@ desc: 宽度平分、有最小宽度、自动换行、左对齐（这是一篇�
   grid-gap: 20px;
 
   margin: 10px 0;
-  background-color: #333;
+  background-color: #7773;
   border: 1px solid #888;
   width: v-bind(wdt + '%');
 }

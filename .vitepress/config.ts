@@ -34,7 +34,7 @@ export default <UserConfig<{}>>{
         .use(MdUnderline)
         .use(MdMathJax)
       
-      md.renderer.rules.table_open = always('<div class="md-table"><table>')
+      md.renderer.rules.table_open = always('<div class="table"><table>')
       md.renderer.rules.table_close = always('</table></div>')
     },
     theme: {
