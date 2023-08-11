@@ -16,16 +16,10 @@ export default <UserConfig<{}>>{
   base: I.base,
   buildEnd: genRss,
   head: [
-    ['link', {
-      rel: 'icon',
-      href: I.base + I.icon,
-      type: 'image/png',
-    }],
-    ['link', {
-      rel: 'alternate',
-      href: I.base + I.feed,
-      type: 'application/atom+xml',
-    }],
+    ['link', { rel: 'icon', href: I.base + I.icon, type: 'image/png' }],
+    ['link', { rel: 'alternate', href: I.base + I.feed, type: 'application/atom+xml' }],
+    ['link', { rel: 'preconnect', href: 'https://rsms.me/' }],
+    ['link', { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }],
   ],
   markdown: {
     anchor: { level: [] }, // TODO

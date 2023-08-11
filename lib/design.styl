@@ -4,11 +4,11 @@ font-italic-han = "KaiTi", "STKaiti", "STFangSong", "FangSong"
 
 font-italic-eng = "Georgia", "Cambria", "Times New Roman"
 
-font-sans-mac = -apple-system, "BlinkMacSystemFont"
+font-sans-prefer = "Inter var", -apple-system, "BlinkMacSystemFont"
 
 font-sans-han = "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif
 
-font-sans-eng = "Inter", "Roboto", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial"
+font-sans-eng = "Roboto", "Segoe UI", "Helvetica", "Arial"
 
 font-mono-eng = "Menlo", "Hack", "Jetbrains Mono", "Source Code Pro", "Fira Code", "Cascadia Code", "Consolas", monospace
 
@@ -26,10 +26,10 @@ blend-color(attr, t, lt, lb, dt, db)
   theme attr blend(alpha(lt, t), lb) blend(alpha(dt, t), db)
 
 txt-color(t, attr = 'color')
-  blend-color attr t #222 #EFC #EEE #214
+  blend-color attr t #222 #EFD #DDD #315
 
 bg-color(t, attr = 'background-color')
-  blend-color attr t #F9F8F0 #652 #223 #EDF
+  blend-color attr t #FFFAF4 #542 #262438 #CBD
 
 bd-color(attr)
   bg-color 0.7 attr

@@ -22,11 +22,11 @@ html
 
   line-height 1.4
   word-wrap break-word
-  text-align justify
   tab-size 4
 
   font-size calc(18px + 0.2vw)
-  font-family FullWidth, font-sans-mac, font-sans-eng, font-sans-han
+  font-feature-settings "liga", "tnum", "calt", "zero", "ss01"
+  font-family "FullWidth", font-sans-prefer, font-sans-eng, font-sans-han
 
 body // 不用HTML，避免dark下的问题
   bg-color 1
@@ -52,17 +52,17 @@ hr
   bd-color background-color
 
 u
-  text-decoration underline 0.1em
+  text-decoration underline 0.08em
   &[title]
     cursor help
     text-decoration-style dashed
 
 em, .italic
   font-style italic
-  font-family FullWidthItalic, FullWidth, font-italic-eng, ItalicHan, font-sans-mac, font-sans-eng, font-sans-han
+  font-family "FullWidthItalic", "FullWidth", font-italic-eng, "ItalicHan", font-sans-prefer, font-sans-eng, font-sans-han
 
 pre, code, var, kbd, samp
-  font-family FullWidth, font-mono-eng, font-sans-mac, font-sans-han
+  font-family "FullWidth", font-mono-eng, font-sans-prefer, font-sans-han
 
 ul, ol
   vmargin 1rem

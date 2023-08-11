@@ -27,8 +27,6 @@ titleTemplate: false
 页面由 ZengYL 编写。  
 其中内容遵循 [CC BY 4.0](https://https://creativecommons.org/licenses/by/4.0/deed.zh) 协议。
 
-----
-
 </main>
 
 <script lang="ts" setup>
