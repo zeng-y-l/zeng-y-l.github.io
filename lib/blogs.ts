@@ -1,4 +1,4 @@
-import { reject, map, pipe, propEq, forEach, sortBy, prop } from 'rambda'
+import { reject, map, pipe, propEq, sortBy } from 'rambda'
 import { createContentLoader } from 'vitepress'
 
 type Blog = {
@@ -18,7 +18,7 @@ export default () => createContentLoader<Blog[]>('src/blog/*.md', {
       create: fm.create,
       update: fm.update ?? fm.create,
     })),
-    reject<Blog>(propEq('index.html', 'file')),
+    reject<Blog>(propEq('', 'file')), // index.md
     sortBy(({ update }) => -Date.parse(update)),
   ),
 })

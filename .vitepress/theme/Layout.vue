@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Content, useData } from 'vitepress'
+import { useData } from 'vitepress'
 import header from '../../lib/header.module.styl'
 import main from '../../lib/main.module.styl'
 import { all, connect, date } from '../../lib/utils'

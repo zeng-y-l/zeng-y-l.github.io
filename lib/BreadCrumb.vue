@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import { scan } from './utils'
 import { last, init } from 'rambda'
-import { withBase } from 'vitepress'
 import I from '../info'
 
 const props = defineProps<{
@@ -21,7 +20,7 @@ const pathList = computed(() => scan(
 <template>
   <nav :class="$style.wrapper">
     <a href="/">
-      <img :class="$style.icon" :src="withBase(I.icon)">
+      <img :class="$style.icon" :src="I.base + I.icon">
     </a>
 
     <div :class="$style.path">

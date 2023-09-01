@@ -16,7 +16,7 @@ title: 作品集
 
   以极高的性能在 Scratch3 中播放 MIDI 音乐！
 
-- [TFGS 官方站](pathname:///TFGS/)
+- [TFGS 官方站](../TFGS/){target="_blank"}
 
   实为非官方百科。年久失修，格式较旧。TFGS 是阿儿法营的一个梗。
 
