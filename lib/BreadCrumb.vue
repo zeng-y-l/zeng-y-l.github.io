@@ -2,7 +2,6 @@
 import { computed } from 'vue'
 import { scan } from './utils'
 import { last, init } from 'rambda'
-import I from '../info'
 
 const props = defineProps<{
   path: string[],
@@ -20,7 +19,7 @@ const pathList = computed(() => scan(
 <template>
   <nav :class="$style.wrapper">
     <a href="/">
-      <img :class="$style.icon" :src="I.base + I.icon">
+      <img :class="$style.icon" src="/icon.png">
     </a>
 
     <div :class="$style.path">

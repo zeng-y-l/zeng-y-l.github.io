@@ -17,7 +17,7 @@ titleTemplate: false
 
 - [关于我](./about)
 - [博客目录](./blog/)
-- <a :href="I.feed">博客 RSS</a>
+- <a href="/feed.xml">博客 RSS</a>
 - [作品集](./project/)
 
 {:class="list.list"}
@@ -33,7 +33,6 @@ titleTemplate: false
   import header from '../lib/header.module.styl'
   import main from '../lib/main.module.styl'
   import list from '../lib/list.module.styl'
-  import I from '../info'
 </script>
 
 <style lang="stylus" module>

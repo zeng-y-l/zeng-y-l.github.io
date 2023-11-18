@@ -3,21 +3,20 @@ import { UserConfig } from 'vitepress'
 import MdRuby from 'markdown-it-ruby'
 // @ts-ignore
 import MdUnderline from 'markdown-it-underline'
-import MdMathJax from 'markdown-it-mathjax3';
-import I from '../info'
+import MdMathJax from 'markdown-it-mathjax3'
 import genRss from './rss'
 import { always } from 'rambda'
 
 // https://vitepress.dev/reference/site-config
 export default <UserConfig<{}>>{
-  title: I.title,
-  lang: I.lang,
+  title: 'ZengYL 的个人主页',
+  lang: 'zh-CN',
   srcDir: './src',
-  base: I.base,
+  base: '/',
   buildEnd: genRss,
   head: [
-    ['link', { rel: 'icon', href: I.base + I.icon, type: 'image/png' }],
-    ['link', { rel: 'alternate', href: I.base + I.feed, type: 'application/atom+xml' }],
+    ['link', { rel: 'icon', href: '/icon.png', type: 'image/png' }],
+    ['link', { rel: 'alternate', href: '/feed.xml', type: 'application/atom+xml' }],
     ['link', { rel: 'preconnect', href: 'https://rsms.me/' }],
     ['link', { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }],
   ],
