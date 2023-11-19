@@ -1,23 +1,24 @@
 @import '../../lib/design.styl'
 
++font-face-of(FullWidth, $font-sans-han)
+  unicode-range: fullwidth-range
+
++font-face-of(ItalicHan, $font-italic-han)
+  font-style: italic
+
++font-face-of(FullWidthItalic, $font-italic-han)
+  unicode-range: fullwidth-range
+  font-style: italic
+
 *
   margin 0
   padding 0
 
-font-face-of(FullWidth, font-sans-han, {
-  unicode-range: fullwidth-range,
-})
-
-font-face-of(ItalicHan, font-italic-han, {
-  font-style: italic,
-})
-
-font-face-of(FullWidthItalic, font-italic-han, {
-  unicode-range: fullwidth-range,
-  font-style: italic,
-})
+*, *::before, *::after
+  box-sizing inherit
 
 html
+  box-sizing border-box
   scroll-behavior smooth
 
   line-height 1.4
@@ -41,7 +42,7 @@ a
 h1, h2, h3, h4, h5, h6
   heading()
 
-for size, i in 17 13 9 6 3 1
+for size, i in 30 22 15 10 6 3
   h{i + 1}
     heading-size size
 

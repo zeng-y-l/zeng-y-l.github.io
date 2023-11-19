@@ -4,15 +4,21 @@ title: 关于我
 
 一个普通的人类。
 
-少玩游戏，偶尔玩 Minecraft、2048。
-
 会 JavaScript（TypeScript）、Rust、Golang。略懂 C、C++。入门 Java、Haskell、OCaml。
 
 也许精通 Scratch。较活跃于阿儿法营。
 
 ----
 
-# 找到我
+## 网站
+
+第一地址：<https://zeng-y-l.github.io/>
+
+第二地址：<https://zengyulin.cn/>
+
+----
+
+## 找到我
 
 建议通过邮箱与我联系。有关于本站的问题，亦可在[仓库](https://github.com/zeng-y-l/zeng-y-l.github.io)发 Issue 提出。
 
@@ -22,7 +28,7 @@ title: 关于我
 
 - [Bilibili](https://space.bilibili.com/515184489)
 
-- [阿儿法营：稽木世界](https://gitblock.cn/Users/1192266)
+- [阿儿法营（稽木世界）](https://gitblock.cn/Users/1192266)
 
 - ~~[共创世界](https://www.ccw.site/student/60ba7f89fa5edd0db16995f6)~~<span :class="list.small">（不再使用）</span>
 

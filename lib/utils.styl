@@ -23,7 +23,7 @@ map-comma(list, f)
   res = res, f(el) for el in slice(list, 1)
   res
 
-font-face-of(name, fonts, block = {})
+font-face-of(name, fonts)
   @font-face
     font-family name
     src map-comma(fonts, @(font){'local(%s)' % font})

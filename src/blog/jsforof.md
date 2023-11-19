@@ -10,7 +10,7 @@ desc: 说说 JS 的 for..of（这是一篇旧文章，日期是后来的）
 
 ----
 
-# 引言
+## 引言
 
 从对Array的使用中可以发现，`for..of`类似如下：
 
@@ -48,7 +48,7 @@ for(let b of a) {
 
 ----
 
-# {可迭代|iterable}
+## {可迭代|iterable}
 
 上文说，`for..of`要求对象实现一些方法。
 
@@ -81,7 +81,7 @@ a[Symbol.iterator] = function () {
 
 迭代器对象是什么？见下。
 
-# 迭代器
+## 迭代器
 
 > 迭代器是一个**对象**（任何对象都行，包括[Proxy](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)之类）。
 
@@ -105,7 +105,7 @@ a[Symbol.iterator] = function () {
 是不是很懵逼？不知道到底干啥？或者大概明白不知道有啥用？  
 看看下面一例。
 
-## 使用迭代器
+### 使用迭代器
 
 ```js
 var iterable = [1, 4, 5, 9, 0, 8];
@@ -121,7 +121,7 @@ while(1) {
 会迭代`iterator`（为迭代器），输出每一项。  
 其是从`iterable`（为可迭代对象）获取到的迭代器。
 
-# 手写一个
+## 手写一个
 
 写个对象，使其可迭代。
 
@@ -160,7 +160,7 @@ for(let v of iterable) {
 但是这么来，本来能直接用循环等方法解决的，现在却很困难。这还不如类似`forEach`的玩意，不是捡了芝麻、丢了西瓜吗？  
 别急，有一种更好的方法来制作迭代器。
 
-# 生成器
+## 生成器
 
 > 生成器定义一个**函数** *（生成器函数）*。
 
@@ -202,7 +202,7 @@ for(let v of iterable) {
 
 举例。
 
-## 写生成器
+### 写生成器
 
 ```js
 var iterable = {
@@ -221,7 +221,7 @@ for(let v of iterable) {
 
 和上面的功能一样，但简单多了，`for..in`使其很容易理解。
 
-## `return`与`yield*`
+### `return`与`yield*`
 
 生成器函数内，还可使用`return`与`yield*`。
 
@@ -261,7 +261,7 @@ var iterable = {
 
 更简单了。。。
 
-## 传入参数
+### 传入参数
 
 这部分和`for..of`无关，因此粗略带过。
 
