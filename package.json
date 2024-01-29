@@ -7,7 +7,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@types/node": "^20.9.1",
+    "@types/node": "^20.11.10",
     "stylus": "^0.62.0",
     "vitepress": "1.0.0-rc.28"
   },
@@ -16,7 +16,7 @@
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-ruby": "^0.1.1",
     "markdown-it-underline": "^1.0.1",
-    "rambda": "^8.5.0",
-    "vue": "^3.3.8"
+    "rambda": "^8.6.0",
+    "vue": "^3.4.15"
   }
 }
