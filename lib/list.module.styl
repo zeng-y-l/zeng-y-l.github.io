@@ -11,8 +11,10 @@ ul.list
       font-weight normal
       gray-color()
 
-    a:not(:hover)
-      color inherit
+    > a
+    p:first-child > a
+      &:not(:hover)
+        color inherit
 
     &
     > p:first-child

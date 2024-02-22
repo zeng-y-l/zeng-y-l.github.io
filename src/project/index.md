@@ -4,6 +4,11 @@ title: 作品集
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [集](/ji/)
+
+  一种简单的回合制双人游戏，以上是游玩链接。  
+  亦可访问[界面源码](https://gitee.com/Zeng_YL/ji-gui)或[训练源码](https://gitee.com/Zeng_YL/ji-train)。
+
 - [TM](https://gitee.com/Zeng_YL/tm)
 
   一门编程语言，编译到 TypeScript 类型元编程，编译器由 Rust 写成。
