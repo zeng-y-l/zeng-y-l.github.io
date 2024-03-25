@@ -12,7 +12,9 @@ title: Brainfuck to WASM Compiler
 
 ----
 
-<Main />
+<ClientOnly>
+  <Main />
+</ClientOnly>
 
 <script setup>
   import Main from '../assets/bf2wasm.js'
