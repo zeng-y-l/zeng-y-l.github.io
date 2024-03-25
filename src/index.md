@@ -43,4 +43,5 @@ titleTemplate: false
     font-size 3em
     font-weight bold
     theme bg-style-txt linear-gradient(120deg, #D09, #50C) linear-gradient(120deg, #DC0, #F96)
+    text-align left
 </style>

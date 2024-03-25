@@ -5,10 +5,11 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "strict": true
+    "strict": true,
+    "noEmit": true
   },
   "include": [
     "**/*",
-    ".vitepress/**/*"
+    ".vitepress/theme/**/*"
   ]
 }
