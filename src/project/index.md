@@ -4,6 +4,14 @@ title: 作品集
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [algeff-ts](https://gitee.com/Zeng_YL/algeff-ts)
+
+  在 TypeScript 中用 Generator 实现 One-Shot 的 Algebraic Effect
+
+- [quicklife](https://gitblock.cn/Projects/1313150/)
+
+  在 Scratch 中快速模拟生命游戏
+
 - [bf2wasm](./bf2wasm)
 
   把 Brainfuck 编译成 WASM。  
