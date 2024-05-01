@@ -4,6 +4,11 @@ title: 作品集
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [algtype](https://lib.rs/crates/algtype)
+
+  在数据与其表示间转换，类似静态反射，类似 Haskell 的 Generic。  
+  可以实现许多功能，如 [count_enum](https://lib.rs/crates/count_enum)、[power_map](https://lib.rs/crates/power_map)。
+
 - [algeff-ts](https://gitee.com/Zeng_YL/algeff-ts)
 
   在 TypeScript 中用 Generator 实现 One-Shot 的 Algebraic Effect

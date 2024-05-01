@@ -9,7 +9,7 @@ type Blog = {
   update: string,
 }
 
-export default () => createContentLoader<Blog[]>('src/blog/*.md', {
+export default () => createContentLoader<Blog[]>('blog/*.md', {
   transform: pipe(
     map(({ url, frontmatter: fm }) => ({
       file: url.split('/').at(-1)!,

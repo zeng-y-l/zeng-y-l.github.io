@@ -4,19 +4,11 @@ title: 关于我
 
 一个普通的人类。
 
-会 JavaScript（TypeScript）、Rust、Golang。略懂 C、C++。入门 Java、Haskell、OCaml。
-
-也许精通 Scratch。较活跃于阿儿法营。
-
-----
-
 ## 网站
 
 第一地址：<https://zeng-y-l.github.io/>
 
 第二地址：<https://zengyulin.cn/>
-
-----
 
 ## 找到我
 
