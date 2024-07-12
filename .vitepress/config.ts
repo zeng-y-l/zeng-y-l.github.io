@@ -1,7 +1,7 @@
 import { UserConfig } from 'vitepress'
 // @ts-ignore
 import MdRuby from 'markdown-it-ruby'
-// @ts-ignore
+//1 @ts-ignore
 import MdUnderline from 'markdown-it-underline'
 import MdMathJax from 'markdown-it-mathjax3'
 import genRss from './rss'
@@ -22,10 +22,10 @@ export default <UserConfig<{}>>{
   ],
   markdown: {
     anchor: { level: [] }, // TODO
+    math: true,
     config(md) {
       md.use(MdRuby)
         .use(MdUnderline)
-        .use(MdMathJax)
       
       md.renderer.rules.table_open = always('<div class="table"><table>')
       md.renderer.rules.table_close = always('</table></div>')
