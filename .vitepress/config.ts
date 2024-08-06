@@ -3,7 +3,6 @@ import { UserConfig } from 'vitepress'
 import MdRuby from 'markdown-it-ruby'
 //1 @ts-ignore
 import MdUnderline from 'markdown-it-underline'
-import MdMathJax from 'markdown-it-mathjax3'
 import genRss from './rss'
 import { always } from 'rambda'
 

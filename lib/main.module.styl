@@ -14,13 +14,13 @@
 
   // code
   code-block = 'div[class*="language-"]'
-  code-inline = 'code:not(pre code)'
+  code-inline = 'code:not(pre.vp-code code)'
 
   {code-block}, {code-inline}
     font-size 0.9em
     border solid 1px
     bd-color border-color
-    bg-color 0.98
+    bg-color 0.97
 
   {code-inline}
     border-radius 0.2em
@@ -42,8 +42,9 @@
 
     > button.copy
       hover-op 1 0
-      right 0.5rem
-      top 0.5rem
+      right 0
+      top 0
+      margin .5rem
 
       width 2rem
       height 2rem
@@ -64,12 +65,9 @@
       top 0.2rem
 
     // 内容
-    > pre
+    > pre.vp-code
       padding 1em
       overflow auto
 
-    > pre.vp-code-
-      &dark
-        theme display none block
-      &light
-        theme display block none
+      span
+        theme color var(--shiki-light) var(--shiki-dark)
