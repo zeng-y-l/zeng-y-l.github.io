@@ -4,6 +4,10 @@ title: 作品集
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [base_any](https://lib.rs/crates/base_any)
+
+  通用的 base 系列编解码。中文编码。
+
 - [algtype](https://lib.rs/crates/algtype)
 
   在数据与其表示间转换，类似静态反射，类似 Haskell 的 Generic。  
