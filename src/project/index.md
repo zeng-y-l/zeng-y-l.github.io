@@ -1,12 +1,21 @@
 ---
-title: 作品集
+title: 小玩意儿
 ---
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [go-algeff](https://gitee.com/Zeng_YL/go-algeff)
+
+  在 Golang 中用管道实现 One-Shot 的 Algebraic Effect
+
+- [base_any](./baseany)
+
+  通用的 base 系列编解码。中文编码。在线使用。  
+  前端的源代码在 <https://gitee.com/Zeng_YL/base_any_web>，主要逻辑都在下面的库。
+
 - [base_any](https://lib.rs/crates/base_any)
 
-  通用的 base 系列编解码。中文编码。
+  上面那玩意儿背后的库。Rust 写的。
 
 - [algtype](https://lib.rs/crates/algtype)
 

@@ -18,7 +18,7 @@ titleTemplate: false
 - [关于我](./about)
 - [博客目录](./blog/)
 - <a href="/feed.xml">博客 RSS</a>
-- [作品集](./project/)
+- [小玩意儿](./project/)
 
 {:class="list.list"}
 
