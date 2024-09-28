@@ -109,8 +109,9 @@ mjx-container
 button
 input
 textarea
+select
   font-size inherit
-  line-height 1.4
+  line-height normal
   color inherit
 
   padding 0.3rem 0.5rem
@@ -122,8 +123,13 @@ textarea
   bd-color border-color
   border-radius 0.3rem
 
+  transition box-shadow 0.2s
+  &:focus
+    bd-color box-shadow 0 0 0.2rem
+
 button
 input
+select
   margin 0.3rem
 
 textarea
@@ -132,10 +138,12 @@ textarea
   max-width 100%
 
 button
+select
   font-family inherit
 
 button
 input[type=checkbox]
+select
   cursor pointer
 
 input[type=checkbox]

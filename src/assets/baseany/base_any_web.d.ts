@@ -2,8 +2,14 @@
 /* eslint-disable */
 /**
 * @param {HTMLElement} el
+* @returns {App}
 */
-export function run(el: HTMLElement): void;
+export function run(el: HTMLElement): App;
+/**
+*/
+export class App {
+  free(): void;
+}
 /**
 */
 export class IntoUnderlyingByteSource {
@@ -64,7 +70,8 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly run: (a: number) => void;
+  readonly __wbg_app_free: (a: number, b: number) => void;
+  readonly run: (a: number) => number;
   readonly __wbg_intounderlyingbytesource_free: (a: number, b: number) => void;
   readonly intounderlyingbytesource_type: (a: number, b: number) => void;
   readonly intounderlyingbytesource_autoAllocateChunkSize: (a: number) => number;
@@ -82,10 +89,11 @@ export interface InitOutput {
   readonly __wbindgen_export_1: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
   readonly __wbindgen_export_3: (a: number, b: number, c: number) => void;
-  readonly __wbindgen_export_4: (a: number) => void;
-  readonly __wbindgen_export_5: (a: number, b: number, c: number, d: number) => void;
+  readonly __wbindgen_export_4: (a: number, b: number) => void;
+  readonly __wbindgen_export_5: (a: number) => void;
+  readonly __wbindgen_export_6: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
-  readonly __wbindgen_export_6: (a: number, b: number, c: number) => void;
+  readonly __wbindgen_export_7: (a: number, b: number, c: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

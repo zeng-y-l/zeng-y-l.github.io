@@ -18,27 +18,27 @@ icon-copied = url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' 
 
 fullwidth-range = U+00B7 /* · */, U+201C-201D /* “” */, U+2018-2019 /* ‘’ */, U+2014 /* — */, U+2026 /* … */
 
-theme(attr, light, dark)
+theme(attr, light, dark, args...)
   sel = 'html[class~="dark"] &' // 可以适应module、scoped
-  fork sel attr dark light
+  fork sel attr dark light args
 
-blend-color(attr, t, lt, lb, dt, db)
-  theme attr blend(alpha(lt, t), lb) blend(alpha(dt, t), db)
+blend-color(attr, t, lt, lb, dt, db, args...)
+  theme attr blend(alpha(lt, t), lb) blend(alpha(dt, t), db) args
 
-txt-color(t, attr = 'color')
-  blend-color attr t #222 #EFD #DDD #315
+txt-color(t, attr = 'color', args...)
+  blend-color attr t #222 #EFD #DDD #315 args
 
-bg-color(t, attr = 'background-color')
-  blend-color attr t #FFFAF4 #542 #262438 #CBD
+bg-color(t, attr = 'background-color', args...)
+  blend-color attr t #FFFAF4 #542 #262438 #CBD args
 
-bd-color(attr)
-  bg-color 0.7 attr
+bd-color(attr, args...)
+  bg-color 0.7 attr args
 
-gray-color(attr = 'color')
-  txt-color 0.5 attr
+gray-color(attr = 'color', args...)
+  txt-color 0.5 attr args
 
-txt2-color(attr = 'color')
-  txt-color 0.7 attr
+txt2-color(attr = 'color', args...)
+  txt-color 0.7 attr args
 
 heading()
   font-weight bold

@@ -10,13 +10,14 @@ title: base_any
 
 ----
 
-<ClientOnly>
-  <div :ref="mounted" />
-</ClientOnly>
+<div :ref="listen" />
 
 <script setup>
   import init, { run } from '../assets/baseany/base_any_web.js'
-  const mounted = el => {
-    init().then(() => run(el))
+  let app
+  const listen = async el => {
+    await init()
+    if (el) app = run(el)
+    else app?.free()
   }
 </script>
