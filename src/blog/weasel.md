@@ -10,7 +10,7 @@ desc: 用 AHK 自动重启小狼毫
 
 脚本如下。右键托盘图标可得*程序文件夹*。
 
-```autohotkey
+```
 loop {
     Sleep 500
     if ProcessExist("WeaselServer.exe") == 0 {
