@@ -123,6 +123,10 @@ select
   bd-color border-color
   border-radius 0.3rem
 
+button
+input:not([type=range])
+textarea
+select
   transition box-shadow 0.2s
   &:focus
     bd-color box-shadow 0 0 0.2rem
@@ -143,6 +147,7 @@ select
 
 button
 input[type=checkbox]
+input[type=range]
 select
   cursor pointer
 
@@ -150,3 +155,6 @@ input[type=checkbox]
   width 1rem
   height 1rem
   vertical-align middle
+
+input[type=range]
+  padding 0
