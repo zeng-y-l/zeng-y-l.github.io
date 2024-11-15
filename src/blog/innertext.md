@@ -28,7 +28,7 @@ HTML2text('1<br>2') // '12'
 
 尝试半天不知问题所在，查询 MDN 也无果，只好看[标准](https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute)。不看不知道，一看吓一跳！获取 `innerText` 的第一条就写着：
 
-> If element is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) or if the user agent is a non-CSS user agent, then return element's [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content).
+> If *element* is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) or if the user agent is a non-CSS user agent, then return *element*'s [descendant text content](https://dom.spec.whatwg.org/#concept-descendant-text-content).
 
 破案。想要正确获取 `innerText`，元素必须显示。于是，可以这样写：
 

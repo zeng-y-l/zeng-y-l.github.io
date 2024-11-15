@@ -20,7 +20,7 @@ desc: 宽度平分、有最小宽度、自动换行、左对齐（这是一篇�
 
 源代码：<https://jsbin.com/wesekofeje/edit?html,css,output>
 
-<style>
+<style scoped>
 #rangegrid{
   width: 100%
 }

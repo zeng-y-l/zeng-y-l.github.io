@@ -66,8 +66,12 @@
 
     // 内容
     > pre.vp-code
-      padding 1em
-      overflow auto
+      overflow-x auto
 
-      span
-        theme color var(--shiki-light) var(--shiki-dark)
+      > code
+        display block
+        padding 1em
+        width fit-content
+
+        span
+          theme color var(--shiki-light) var(--shiki-dark)
