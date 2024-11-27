@@ -6,15 +6,19 @@ title: 关于我
 
 ## 网站
 
-第一地址：<https://zeng-y-l.github.io/>
+第一地址：<https://zeng-y-l.github.io/>（GitHub Pages）
 
-第二地址：<https://zengyulin.cn/>
+第二地址：<https://zengyulin.cn/>（旧网站，不再使用）
+
+第三地址：<https://blog.zengyulin.cn/>（Cloudflare Pages）
 
 ## 找到我
 
 建议通过邮箱与我联系。有关于本站的问题，亦可在[仓库](https://github.com/zeng-y-l/zeng-y-l.github.io)发 Issue 提出。
 
 - [zeng-y-l@qq.com](mailto:zeng-y-l@qq.com)
+
+- [GitHub](https://github.com/zeng-y-l/)
 
 - [Gitee](https://gitee.com/Zeng_YL)
 
