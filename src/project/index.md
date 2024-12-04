@@ -4,6 +4,11 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [万年历](./wannianli)
+
+  前端实现的农历，动态计算。  
+  源码在 [Gitee](https://gitee.com/Zeng_YL/wannianli) 和 [GitHub](https://github.com/zeng-y-l/wannianli) 上。
+
 - [flat_bit_set](https://lib.rs/crates/flat_bit_set)
 
   有序、稀疏、节省空间的 bitset，适用于小数据量
