@@ -42,8 +42,8 @@ new Intl.DateTimeFormat().resolvedOptions().timeZone // 'Asia/Shanghai'
 
 - 1986-1991 年，实行夏令时。
 - 1940 年代有多次调整，很混乱，我也不清楚。
-- 1919年，实行夏令时。
-- 1901年前，使用本地时间 `UTC+8:05:43`。
+- 1919 年，实行夏令时。
+- 1901 年前，使用本地时间 `UTC+8:05:43`。
 
 [这个网站 ](https://www.timeanddate.com/time/zone/china/shanghai)可以看到时区的历史变化。我也看了 [IANA 时区数据库](https://www.iana.org/time-zones)，看得我晕头转向。
 
