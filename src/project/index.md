@@ -6,7 +6,8 @@ title: 小玩意儿
 
 - [浮点数性质测试](./numtest)
 
-  随机生成数据，测试浮点数的性质。
+  随机生成数据，测试浮点数的性质。  
+  可以看[源码](https://gitee.com/Zeng_YL/numtest)和[介绍文章](../blog/numtest)。
 
 - [万年历](./wannianli)
 
