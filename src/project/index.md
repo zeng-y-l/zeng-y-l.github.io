@@ -6,7 +6,8 @@ title: 小玩意儿
 
 - [《通规》速查](./tgdict)
 
-  速查《通用规范汉字表》的序号、级别、笔画数、繁体、异体。
+  速查《通用规范汉字表》的序号、级别、笔画数、繁体、异体。  
+  可以看[源码](https://gitee.com/Zeng_YL/tgdict)和[介绍文章](../blog/tgdict)。
 
 - [浮点数性质测试](./numtest)
 
@@ -16,7 +17,7 @@ title: 小玩意儿
 - [万年历](./wannianli)
 
   前端实现的农历，动态计算。  
-  源码在 [Gitee](https://gitee.com/Zeng_YL/wannianli) 和 [GitHub](https://github.com/zeng-y-l/wannianli) 上。
+  源码在 [Gitee](https://gitee.com/Zeng_YL/wannianli) 和 [GitHub](https://github.com/zeng-y-l/wannianli) 上。[这篇文章](../blog/wannianli)有介绍。
 
 - [flat_bit_set](https://lib.rs/crates/flat_bit_set)
 
