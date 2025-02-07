@@ -54,7 +54,7 @@ title: 小玩意儿
   把 Brainfuck 编译成 WASM。  
   源代码在 <https://gitee.com/Zeng_YL/bf2wasm/>。
 
-- [集](/ji/)
+- [集](/ji/){target=_blank}
 
   一种简单的回合制双人游戏，以上是游玩链接。  
   亦可访问[界面源码](https://gitee.com/Zeng_YL/ji-gui)或[训练源码](https://gitee.com/Zeng_YL/ji-train)。
@@ -71,7 +71,7 @@ title: 小玩意儿
 
   以极高的性能在 Scratch3 中播放 MIDI 音乐！
 
-- [TFGS 官方站](../TFGS/){target="_blank"}
+- [TFGS 官方站](/TFGS/){target=_blank}
 
   实为非官方百科。年久失修，格式较旧。TFGS 是阿儿法营的一个梗。
 

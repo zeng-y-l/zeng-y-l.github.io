@@ -17,7 +17,7 @@ title: 荒岛生存
 
 - ~~[卡搭](https://kada.163.com/project/6843160-1546373.htm)~~
 
-- <a :href="withBase('/hdsc.html')">本站打包在线游玩</a>
+- [本站打包在线游玩](/hdsc.html){target=_blank}
   
   使用 [TurboWarp Packager](https://packager.turbowarp.org/)。
 
@@ -49,6 +49,5 @@ title: 荒岛生存
 - 温度与天气
 
 <script lang="ts" setup>
-  import { withBase } from 'vitepress'
   import list from '../../../lib/list.module.styl'
 </script>
