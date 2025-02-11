@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="icon" href="/icon.png" type="image/png">
+  <title>浑天画板</title>
+<script defer src="./51.527706f9.js"></script><script defer src="./index.3d393a51.js"></script><link href="./index.9b1aafae.css" rel="stylesheet"></head>
+
+<body>
+  <canvas id="cvs"></canvas>
+  <div id="hud">
+    <div><label>隐藏设置 <input type="checkbox" id="hide"></label></div>
+    <div id="config">
+      <div><label>绘画模式 <input type="checkbox" id="mode"></label></div>
+      <div><label>笔画粗细 <input type="range" min="0" max="10" step="1" value="0" id="size"></label></div>
+      <div><label>笔画颜色 <input type="color" value="#FFFF33" id="color"></label></div>
+      <div><label>显示经纬网 <input type="checkbox" checked id="showlonlat"></label></div>
+      <div><label>经纬网颜色 <input type="color" value="#0066CC" id="lonlatcolor"></label></div>
+      <div><label>高分辨率 <input type="checkbox" id="hidpi"></label></div>
+      <div>
+        <button type="button" id="undo">撤销</button>
+        <button type="button" id="clear">清空</button>
+      </div>
+      <div>
+        <button type="button" id="export">导出</button>
+        <button type="button" id="import">导入</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
