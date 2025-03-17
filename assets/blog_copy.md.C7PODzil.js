@@ -1,0 +1,7 @@
+import{_ as s,a as n,G as p,o as e}from"./chunks/framework.D2GH6i3q.js";const u=JSON.parse('{"title":"纯文本复制","description":"","frontmatter":{"title":"纯文本复制","create":"2024-12-12T00:00:00.000Z","desc":"用 AHK 实现纯文本复制"},"headers":[],"relativePath":"blog/copy.md","filePath":"blog/copy.md"}'),t={name:"blog/copy.md"};function o(l,a,c,i,d,r){return e(),n("div",null,a[0]||(a[0]=[p(`<p>从浏览器复制东西，是 HTML 格式，带着样式。如果粘贴到富文本编辑器里，例如 Anki，就会保留样式。浏览器很喜欢自作主张搞一些莫名其妙的样式，有的时候套个 <code>div</code>，有的时候带个背景色，有的时候多个 <code>&amp;nbsp;</code>，很坑。在《<a href="./typbug.html">博客的离谱排版问题</a>》中我就遇到过类似的问题。</p><p>如果就是需要纯文本格式，怎么办？Anki 其实支持纯文本粘贴，但似乎无法去除 <code>div</code>。这时候，通常需要去记事本里头过一遍，把样式洗掉。实在麻烦，于是求助万能的 AutoHotkey。写个脚本，果然能用。</p><p>如下脚本，睡眠十毫秒是为了避免有时候还没复制到。我也不知道为什么会出现那种情况，不过睡眠一下就解决了，呵呵……</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>; Ctrl+Alt+C 纯文本复制</span></span>
+<span class="line"><span>^!c::{</span></span>
+<span class="line"><span>    Send &quot;^c&quot;</span></span>
+<span class="line"><span>    ClipWait 1</span></span>
+<span class="line"><span>    Sleep 10</span></span>
+<span class="line"><span>    A_Clipboard := A_Clipboard</span></span>
+<span class="line"><span>}</span></span></code></pre></div>`,4)]))}const m=s(t,[["render",o]]);export{u as __pageData,m as default};
