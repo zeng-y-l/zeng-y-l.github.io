@@ -6,7 +6,8 @@ title: 小玩意儿
 
 - [原始递归函数](./primrec)
 
-  转换和运行原始递归函数。
+  转换和运行原始递归函数。  
+  可以看[源码](https://github.com/zeng-y-l/primrec)。
 
 - [浑天画板](/huntian/){target=_blank}
 
