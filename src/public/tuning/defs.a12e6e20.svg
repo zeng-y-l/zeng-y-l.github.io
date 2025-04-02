@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="0" y1="0" x2="1" y2="0" id="path">
+      <stop stop-color="#3f0" offset="0.3" />
+      <stop stop-color="#09f" offset="0.7" />
+    </linearGradient>
+    <linearGradient x1="0" y1="0" x2="1" y2="0" id="selpath">
+      <stop stop-color="#cf0" offset="0.2" />
+      <stop stop-color="#f03" offset="0.8" />
+    </linearGradient>
+  </defs>
+</svg>

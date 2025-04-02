@@ -4,7 +4,14 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
-- [循环小数与分数互转](./repdec)  
+- [律](/tuning/){target=_blank}
+
+  计算各个音的频率。  
+  可以看[源码](https://github.com/zeng-y-l/tuning)。
+
+- [循环小数与分数互转](./repdec)
+
+  可以看[源码](https://gitee.com/Zeng_YL/repdec)。
 
 - [原始递归函数](./primrec)
 
