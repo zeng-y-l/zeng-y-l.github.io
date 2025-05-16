@@ -1,6 +1,6 @@
-import { defineComponent as M, ref as g, computed as R, openBlock as $, createElementBlock as b, Fragment as U, createTextVNode as v, withDirectives as I, createElementVNode as c, vModelText as S, toDisplayString as y, renderList as A } from "vue";
-const E = '(function(){"use strict";const n=[0,1/0,NaN,Number.MIN_VALUE,Number.MAX_VALUE].flatMap(t=>[t,-t]),s=new DataView(new ArrayBuffer(8));function i(){const t=0|n.length*3*Math.random();return t<n.length?n[t]:(s.setUint32(0,Math.random()*4294967296),s.setUint32(4,Math.random()*4294967296),s.getFloat64(0))}self.onmessage=({data:t})=>{const[o,f]=t,l=new Function(...o,`return ${f}`);let e=0;setInterval(()=>{const c=e+100;for(;e++,e<c;){const r=[];for(let a=0;a<o.length;a++)r.push(i());if(!l(...r)){self.postMessage({type:"fail",arg:r,count:e}),self.close();return}}self.postMessage({type:"ok",count:e})},0)}})();\n', L = typeof self < "u" && self.Blob && new Blob([E], { type: "text/javascript;charset=utf-8" });
-function C(n) {
+import { defineComponent as R, ref as g, computed as I, openBlock as b, createElementBlock as y, Fragment as U, createTextVNode as v, withDirectives as S, createElementVNode as c, vModelText as A, toDisplayString as $, renderList as C } from "vue";
+const M = '(function(){"use strict";const n=[0,1/0,NaN,Number.MIN_VALUE,Number.MAX_VALUE].flatMap(t=>[t,-t]),s=new DataView(new ArrayBuffer(8));function i(){const t=0|n.length*3*Math.random();return t<n.length?n[t]:(s.setUint32(0,Math.random()*4294967296),s.setUint32(4,Math.random()*4294967296),s.getFloat64(0))}self.onmessage=({data:t})=>{const[o,f]=t,l=new Function(...o,`return ${f}`);let e=0;setInterval(()=>{const c=e+100;for(;e++,e<c;){const r=[];for(let a=0;a<o.length;a++)r.push(i());if(!l(...r)){self.postMessage({type:"fail",arg:r,count:e}),self.close();return}}self.postMessage({type:"ok",count:e})},0)}})();\n', L = typeof self < "u" && self.Blob && new Blob([M], { type: "text/javascript;charset=utf-8" });
+function _(n) {
   let e;
   try {
     if (e = L && (self.URL || self.webkitURL).createObjectURL(L), !e) throw "";
@@ -12,7 +12,7 @@ function C(n) {
     }), r;
   } catch {
     return new Worker(
-      "data:text/javascript;charset=utf-8," + encodeURIComponent(E),
+      "data:text/javascript;charset=utf-8," + encodeURIComponent(M),
       {
         name: n == null ? void 0 : n.name
       }
@@ -49,7 +49,7 @@ const x = {
   ["eof", "$"],
   ["err", ".*"]
 ].map(([n, e]) => `(?<${n}>${e})`).join("|")})\\s*`, "uy");
-function _(n) {
+function F(n) {
   const e = [];
   for (n = n.trimStart(), N.lastIndex = 0; ; ) {
     const r = N.exec(n).groups;
@@ -69,7 +69,7 @@ function _(n) {
 function w(n, e) {
   return Object.prototype.hasOwnProperty.call(n, e);
 }
-function F(n) {
+function P(n) {
   let e = 0;
   function r() {
     return n[e] ?? ["eof", "EOF"];
@@ -125,7 +125,7 @@ function F(n) {
 function m(n) {
   return Array.isArray(n) ? n[0] == "fn" ? `${n[1]}(${n[2].map(m).join(", ")})` : n[0] == "un" ? `(${n[1]}${m(n[2])})` : n[0] == "bin" ? `(${m(n[2])} ${n[1]} ${m(n[3])})` : `(${m(n[1])} ? ${m(n[2])} : ${m(n[3])})` : String(n);
 }
-const P = {
+const O = {
   NaN: NaN,
   Infinity: 1 / 0,
   E: Math.E,
@@ -189,7 +189,7 @@ function V(n) {
 function d(n, e) {
   if (typeof n == "number") return String(n);
   if (typeof n == "string")
-    return w(P, n) ? String(n) : (e[n] = 1, n);
+    return w(O, n) ? String(O[n]) : (e[n] = 1, n);
   if (n[0] == "fn") {
     if (!w(k, n[1])) throw `"${n[1]}" 不是函数`;
     if (k[n[1]] != -1 && k[n[1]] != n[2].length)
@@ -207,30 +207,28 @@ function d(n, e) {
         return `Object.is(${r}, ${t})`;
       case "==":
         return `(${r} === ${t})`;
-      case "!=":
-        return `(${r} !== ${t})`;
       default:
         return `(${r} ${n[1]} ${t})`;
     }
   }
   return `(${d(n[1], e)} ? ${d(n[2], e)} : ${d(n[3], e)})`;
 }
-function O(n) {
+function E(n) {
   try {
-    const e = {}, r = F(_(n));
+    const e = {}, r = P(F(n));
     return V(r), { kind: "ok", expr: d(r, e), args: Object.keys(e) };
   } catch (e) {
     return { kind: "err", e };
   }
 }
-const X = { key: 0 }, B = { key: 1 }, D = ["disabled"], W = ["disabled"], T = { key: 2 }, q = { key: 3 }, K = /* @__PURE__ */ M({
+const X = { key: 0 }, B = { key: 1 }, D = ["disabled"], W = ["disabled"], T = { key: 2 }, q = { key: 3 }, K = /* @__PURE__ */ R({
   __name: "Main",
   setup(n) {
-    const e = g("x + y = y + x"), r = g(O(e.value).args), t = R(() => O(e.value)), i = g(0), l = g(), a = g();
+    const e = g("x + y = y + x"), r = g(E(e.value).args), t = I(() => E(e.value)), i = g(0), l = g(), a = g();
     function f() {
       if (t.value.kind == "err") return;
       i.value = 0, r.value = t.value.args, l.value = void 0, o();
-      const u = new C();
+      const u = new _();
       a.value = u, u.postMessage([t.value.args, t.value.expr]), u.onmessage = ({ data: s }) => {
         i.value = s.count, s.type == "fail" && (o(), l.value = s.arg);
       };
@@ -239,21 +237,21 @@ const X = { key: 0 }, B = { key: 1 }, D = ["disabled"], W = ["disabled"], T = { 
       var u;
       (u = a.value) == null || u.terminate(), a.value = void 0;
     }
-    return (u, s) => ($(), b(U, null, [
+    return (u, s) => (b(), y(U, null, [
       s[4] || (s[4] = v(" 表达式：")),
-      I(c("input", {
+      S(c("input", {
         type: "text",
         "onUpdate:modelValue": s[0] || (s[0] = (h) => e.value = h)
       }, null, 512), [
-        [S, e.value]
+        [A, e.value]
       ]),
       s[5] || (s[5] = v("（结果为布尔值） ")),
-      t.value.kind == "ok" ? ($(), b("div", X, [
-        v(" 随机变量：" + y(t.value.args.join(", ")), 1),
+      t.value.kind == "ok" ? (b(), y("div", X, [
+        v(" 随机变量：" + $(t.value.args.join(", ")), 1),
         s[1] || (s[1] = c("br", null, null, -1)),
         s[2] || (s[2] = v(" 对应的 JS 代码：")),
-        c("code", null, y(t.value.expr), 1)
-      ])) : ($(), b("div", B, " 解析错误：" + y(t.value.e), 1)),
+        c("code", null, $(t.value.expr), 1)
+      ])) : (b(), y("div", B, " 解析错误：" + $(t.value.e), 1)),
       s[6] || (s[6] = c("hr", null, null, -1)),
       c("button", {
         type: "button",
@@ -265,15 +263,15 @@ const X = { key: 0 }, B = { key: 1 }, D = ["disabled"], W = ["disabled"], T = { 
         onClick: o,
         disabled: a.value == null
       }, "停止测试", 8, W),
-      c("div", null, y(a.value ? "正" : "不") + "在运行，已执行 " + y(i.value) + " 次测试。 ", 1),
-      l.value != null ? ($(), b("div", T, [
+      c("div", null, $(a.value ? "正" : "不") + "在运行，已执行 " + $(i.value) + " 次测试。 ", 1),
+      l.value != null ? (b(), y("div", T, [
         s[3] || (s[3] = v(" 测试发现问题，参数： ")),
         c("ul", null, [
-          ($(!0), b(U, null, A(l.value, (h, p) => ($(), b("li", null, [
-            c("code", null, y(r.value[p]) + " = " + y(Object.is(-0, h) ? "-0" : String(h)), 1)
+          (b(!0), y(U, null, C(l.value, (h, p) => (b(), y("li", null, [
+            c("code", null, $(r.value[p]) + " = " + $(Object.is(-0, h) ? "-0" : String(h)), 1)
           ]))), 256))
         ])
-      ])) : ($(), b("div", q, " 测试暂未发现问题 "))
+      ])) : (b(), y("div", q, " 测试暂未发现问题 "))
     ], 64));
   }
 });
