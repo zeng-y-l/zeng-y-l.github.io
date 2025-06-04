@@ -16,7 +16,7 @@ title: 关于我
 
 建议通过邮箱与我联系。有关于本站的问题，亦可在[仓库](https://github.com/zeng-y-l/zeng-y-l.github.io)发 Issue 提出。
 
-- [zeng-y-l@qq.com](mailto:zeng-y-l@qq.com)
+- [zeng-y-l@outlook.com](mailto:zeng-y-l@outlook.com)
 
 - [GitHub](https://github.com/zeng-y-l/)
 
