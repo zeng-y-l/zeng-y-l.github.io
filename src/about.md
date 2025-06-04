@@ -8,9 +8,9 @@ title: 关于我
 
 第一地址：<https://zeng-y-l.github.io/>（GitHub Pages）
 
-第二地址：<https://zengyulin.cn/>（旧网站，不再使用）
+第二地址：<https://blog.zengyulin.cn/>（Cloudflare Pages，内容与上一个相同）
 
-第三地址：<https://blog.zengyulin.cn/>（Cloudflare Pages）
+第三地址：<https://zengyulin.cn/>（旧网站，不再使用）
 
 ## 找到我
 
