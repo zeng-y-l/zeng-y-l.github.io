@@ -4,13 +4,17 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [tytro](https://lib.rs/crates/tytro)
+
+  类型上的尾递归优化。[源码](https://github.com/zeng-y-l/tytro)。（Rust 库）
+
 - [农历](https://gitblock.cn/Projects/1402308/)
 
   Scratch 里的农历！
 
 - [xunhuan](https://www.npmjs.com/package/xunhuan)
 
-  小而快的迭代器库。[源码](https://github.com/zeng-y-l/xunhuan)。
+  小而快的迭代器库。[源码](https://github.com/zeng-y-l/xunhuan)。（TypeScript 库）
 
 - [律](/tuning/){target=_blank}
 
@@ -48,7 +52,7 @@ title: 小玩意儿
 
 - [flat_bit_set](https://lib.rs/crates/flat_bit_set)
 
-  有序、稀疏、节省空间的 bitset，适用于小数据量
+  有序、稀疏、节省空间的 bitset，适用于小数据量（Rust 库）
 
 - [go-algeff](https://gitee.com/Zeng_YL/go-algeff)
 
@@ -65,7 +69,7 @@ title: 小玩意儿
 
 - [algtype](https://lib.rs/crates/algtype)
 
-  在数据与其表示间转换，类似静态反射，类似 Haskell 的 Generic。  
+  在数据与其表示间转换，类似静态反射，类似 Haskell 的 Generic。（Rust 库）  
   可以实现许多功能，如 [count_enum](https://lib.rs/crates/count_enum)、[power_map](https://lib.rs/crates/power_map)。
 
 - [algeff-ts](https://gitee.com/Zeng_YL/algeff-ts)

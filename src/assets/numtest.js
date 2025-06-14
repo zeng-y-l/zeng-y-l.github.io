@@ -1,136 +1,138 @@
-import { defineComponent as R, ref as g, computed as I, openBlock as b, createElementBlock as y, Fragment as U, createTextVNode as v, withDirectives as S, createElementVNode as c, vModelText as A, toDisplayString as $, renderList as C } from "vue";
-const M = '(function(){"use strict";const n=[0,1/0,NaN,Number.MIN_VALUE,Number.MAX_VALUE].flatMap(t=>[t,-t]),s=new DataView(new ArrayBuffer(8));function i(){const t=0|n.length*3*Math.random();return t<n.length?n[t]:(s.setUint32(0,Math.random()*4294967296),s.setUint32(4,Math.random()*4294967296),s.getFloat64(0))}self.onmessage=({data:t})=>{const[o,f]=t,l=new Function(...o,`return ${f}`);let e=0;setInterval(()=>{const c=e+100;for(;e++,e<c;){const r=[];for(let a=0;a<o.length;a++)r.push(i());if(!l(...r)){self.postMessage({type:"fail",arg:r,count:e}),self.close();return}}self.postMessage({type:"ok",count:e})},0)}})();\n', L = typeof self < "u" && self.Blob && new Blob([M], { type: "text/javascript;charset=utf-8" });
-function _(n) {
-  let e;
+import { defineComponent as O, ref as g, computed as S, onUnmounted as A, openBlock as p, createElementBlock as y, Fragment as L, createTextVNode as v, withDirectives as _, createElementVNode as m, vModelText as C, toDisplayString as b, renderList as F } from "vue";
+const I = '(function(){"use strict";const n=[0,1/0,NaN,Number.MIN_VALUE,Number.MAX_VALUE].flatMap(t=>[t,-t]),s=new DataView(new ArrayBuffer(8));function i(){const t=0|n.length*5*Math.random();return t<n.length?n[t]:(s.setUint32(0,Math.random()*4294967296),s.setUint32(4,Math.random()*4294967296),s.getFloat64(0))}self.onmessage=({data:t})=>{const[o,f]=t,l=new Function(...o,`return ${f}`);let e=0;setInterval(()=>{const c=e+100;for(;e++,e<c;){const r=[];for(let a=0;a<o.length;a++)r.push(i());if(!l(...r)){self.postMessage({type:"fail",arg:r,count:e}),self.close();return}}self.postMessage({type:"ok",count:e})},0)}})();\n', N = typeof self < "u" && self.Blob && new Blob([I], { type: "text/javascript;charset=utf-8" });
+function P(n) {
+  let t;
   try {
-    if (e = L && (self.URL || self.webkitURL).createObjectURL(L), !e) throw "";
-    const r = new Worker(e, {
+    if (t = N && (self.URL || self.webkitURL).createObjectURL(N), !t) throw "";
+    const r = new Worker(t, {
       name: n == null ? void 0 : n.name
     });
     return r.addEventListener("error", () => {
-      (self.URL || self.webkitURL).revokeObjectURL(e);
+      (self.URL || self.webkitURL).revokeObjectURL(t);
     }), r;
   } catch {
     return new Worker(
-      "data:text/javascript;charset=utf-8," + encodeURIComponent(M),
+      "data:text/javascript;charset=utf-8," + encodeURIComponent(I),
       {
         name: n == null ? void 0 : n.name
       }
     );
   } finally {
-    e && (self.URL || self.webkitURL).revokeObjectURL(e);
+    t && (self.URL || self.webkitURL).revokeObjectURL(t);
   }
 }
 const x = {
   "?": [10, 11],
-  "||": [20, 21],
-  "&&": [30, 31],
-  "=": [50, 51],
-  "==": [50, 51],
-  "<": [50, 51],
-  ">": [50, 51],
-  "<=": [50, 51],
-  ">=": [50, 51],
-  "+": [60, 61],
-  "-": [60, 61],
-  "*": [70, 71],
-  "/": [70, 71],
-  "%": [70, 71],
-  "^": [91, 90],
-  "**": [91, 90]
-}, j = {
-  "!": 40,
-  "+": 80,
-  "-": 80
-}, N = new RegExp(`(?:${[
+  "->": [21, 20],
+  "||": [30, 31],
+  "&&": [40, 41],
+  "=": [60, 61],
+  "==": [60, 61],
+  "<": [60, 61],
+  ">": [60, 61],
+  "<=": [60, 61],
+  ">=": [60, 61],
+  "+": [100, 101],
+  "-": [100, 101],
+  "*": [110, 111],
+  "/": [110, 111],
+  "%": [110, 111],
+  "^": [131, 130],
+  "**": [131, 130]
+}, U = {
+  "!": 50,
+  "+": 120,
+  "-": 120
+}, E = new RegExp(`(?:${[
   ["num", "[0-9]+(?:\\.[0-9]+)?(?:[eE][+-]?[0-9]+)?"],
   ["nm", "\\p{XIDS}\\p{XIDC}*"],
-  ["sym", [..."(,:)", ...Object.keys(x), ...Object.keys(j)].sort((n, e) => e.length - n.length).map((n) => n.replace(/([()|/+*^?])/g, "\\$1")).join("|")],
+  ["sym", [..."(,:)", ...Object.keys(x), ...Object.keys(U)].sort((n, t) => t.length - n.length).map((n) => n.replace(/([()|/+*^?])/g, "\\$1")).join("|")],
   ["eof", "$"],
   ["err", ".*"]
-].map(([n, e]) => `(?<${n}>${e})`).join("|")})\\s*`, "uy");
-function F(n) {
-  const e = [];
-  for (n = n.trimStart(), N.lastIndex = 0; ; ) {
-    const r = N.exec(n).groups;
+].map(([n, t]) => `(?<${n}>${t})`).join("|")})\\s*`, "uy");
+function V(n) {
+  const t = [];
+  for (n = n.trimStart(), E.lastIndex = 0; ; ) {
+    const r = E.exec(n).groups;
     if (r.num != null)
-      e.push(["num", Number(r.num)]);
+      t.push(["num", Number(r.num)]);
     else if (r.nm != null)
-      e.push(["nm", r.nm]);
+      t.push(["nm", r.nm]);
     else if (r.sym != null)
-      e.push(["sym", r.sym]);
+      t.push(["sym", r.sym]);
     else {
       if (r.eof != null)
-        return e;
+        return t;
       throw `无法解析："${r.err}"`;
     }
   }
 }
-function w(n, e) {
-  return Object.prototype.hasOwnProperty.call(n, e);
+function j(n, t) {
+  return Object.prototype.hasOwnProperty.call(n, t);
 }
-function P(n) {
-  let e = 0;
+function X(n) {
+  let t = 0;
   function r() {
-    return n[e] ?? ["eof", "EOF"];
+    return n[t] ?? ["eof", "EOF"];
   }
-  function t() {
-    const f = r();
-    return e++, f;
+  function e() {
+    const c = r();
+    return t++, c;
   }
-  function i(f, o) {
-    return f[0] == "sym" && f[1] == o;
+  function s(c, o) {
+    return c[0] == "sym" && c[1] == o;
   }
-  const l = a(0);
+  const i = a(0);
   if (r()[0] != "eof") throw `应结束而非 "${r()[1]}"`;
-  return l;
-  function a(f) {
-    let o = t(), u;
+  return i;
+  function a(c) {
+    let o = e(), l;
     if (o[0] == "eof") throw "不应结束";
     if (o[0] != "sym")
-      u = o[1];
+      l = o[1];
     else if (o[1] == "(") {
-      if (u = a(0), o = t(), !i(o, ")")) throw `应为右括号而非 "${o[1]}"`;
+      if (l = a(0), o = e(), !s(o, ")")) throw `应为右括号而非 "${o[1]}"`;
     } else {
-      if (!w(j, o[1])) throw `"${o[1]}" 不是前缀运算`;
-      const s = a(j[o[1]]);
-      u = ["un", o[1], s];
+      if (!j(U, o[1])) throw `"${o[1]}" 不是前缀运算`;
+      const d = a(U[o[1]]);
+      l = ["un", o[1], d];
     }
+    let u = !1;
     for (; o = r(), o[0] != "eof"; ) {
-      if (i(o, "(")) {
-        if (typeof u != "string") throw `应为函数而非 ${m(u)}`;
-        t();
-        const p = [];
-        if (i(r(), ")")) t();
-        else for (; p.push(a(0)), o = t(), !i(o, ")"); )
-          if (!i(o, ",")) throw `应为逗号或右括号而非 "${o[1]}"`;
-        u = ["fn", u, p];
+      if (s(o, "(")) {
+        if (typeof l != "string") throw `应为函数而非 ${$(l)}`;
+        e();
+        const h = [];
+        if (s(r(), ")")) e();
+        else for (; h.push(a(0)), o = e(), !s(o, ")"); )
+          if (!s(o, ",")) throw `应为逗号或右括号而非 "${o[1]}"`;
+        l = ["fn", l, h], u = !1;
         continue;
       }
-      if (o[0] != "sym" || !w(x, o[1])) break;
-      const [s, h] = x[o[1]];
-      if (s < f) break;
-      if (t(), o[1] == "?") {
-        const p = a(0);
-        if (o = t(), !i(o, ":")) throw `应为冒号而非 "${o[1]}"`;
-        u = ["cond", u, p, a(h)];
+      if (o[0] != "sym" || !j(x, o[1])) break;
+      const [d, k] = x[o[1]];
+      if (d < c) break;
+      if (e(), o[1] == "?") {
+        const h = a(0);
+        if (o = e(), !s(o, ":")) throw `应为冒号而非 "${o[1]}"`;
+        l = ["cond", l, h, a(k)], u = !1;
       } else {
-        const p = a(h);
-        u = ["bin", o[1], u, p];
+        const h = a(k);
+        ["=", "==", "<", ">", "<=", ">="].includes(o[1]) ? u && Array.isArray(l) && l[0] === "chain" ? l[2].push([o[1], h]) : (l = ["chain", l, [[o[1], h]]], u = !0) : (l = ["bin", o[1], l, h], u = !1);
       }
     }
-    return u;
+    return l;
   }
 }
-function m(n) {
-  return Array.isArray(n) ? n[0] == "fn" ? `${n[1]}(${n[2].map(m).join(", ")})` : n[0] == "un" ? `(${n[1]}${m(n[2])})` : n[0] == "bin" ? `(${m(n[2])} ${n[1]} ${m(n[3])})` : `(${m(n[1])} ? ${m(n[2])} : ${m(n[3])})` : String(n);
+function $(n) {
+  return Array.isArray(n) ? n[0] == "fn" ? `${n[1]}(${n[2].map($).join(", ")})` : n[0] == "un" ? `(${n[1]}${$(n[2])})` : n[0] == "bin" ? `(${$(n[2])} ${n[1]} ${$(n[3])})` : n[0] == "cond" ? `(${$(n[1])} ? ${$(n[2])} : ${$(n[3])})` : `(${$(n[1])} ${n[2].map(([t, r]) => ` ${t} ${r}`).join("")}` : String(n);
 }
-const O = {
+const M = {
   NaN: NaN,
   Infinity: 1 / 0,
   E: Math.E,
   PI: Math.PI
-}, k = {
+}, w = {
   abs: 1,
   acos: 1,
   acosh: 1,
@@ -164,117 +166,145 @@ const O = {
   max: -1,
   min: -1
 };
-function V(n) {
-  function e(t, i, l) {
-    if (i != l) throw `${m(t)} 应为 ${i} 而非 ${l}`;
+function B(n) {
+  function t(e, s, i) {
+    if (s != i) throw `${$(e)} 应为 ${s} 而非 ${i}`;
   }
-  e(n, "bool", r(n));
-  function r(t) {
-    if (!Array.isArray(t)) return "num";
-    if (t[0] == "fn")
-      return t[2].forEach((l) => e(l, "num", r(l))), "num";
-    if (t[0] == "un") {
-      const l = t[1] == "!" ? "bool" : "num";
-      return e(t[2], l, r(t[2])), l;
+  t(n, "bool", r(n));
+  function r(e) {
+    if (!Array.isArray(e)) return "num";
+    switch (e[0]) {
+      case "fn":
+        return e[2].forEach((s) => t(s, "num", r(s))), "num";
+      case "un": {
+        const s = e[1] == "!" ? "bool" : "num";
+        return t(e[2], s, r(e[2])), s;
+      }
+      case "bin": {
+        const s = ["&&", "||", "->"].includes(e[1]), i = r(e[2]);
+        return s && t(e[2], "bool", i), t(e[3], i, r(e[3])), s ? "bool" : "num";
+      }
+      case "chain": {
+        let s = e[1], i = r(s);
+        for (const [a, c] of e[2]) {
+          const o = r(c);
+          a != "=" && a != "==" && t(s, i, "num"), t(c, i, o), s = c, i = o;
+        }
+        return "bool";
+      }
+      case "cond": {
+        t(e[1], "bool", r(e[1]));
+        const s = r(e[2]);
+        return t(e[3], s, r(e[3])), s;
+      }
     }
-    if (t[0] == "bin") {
-      const l = t[1] == "&&" || t[1] == "||", a = t[1] == "=" || t[1] == "==", f = ["<", ">", "<=", ">="].includes(t[1]), o = r(t[2]);
-      return l ? e(t[2], "bool", o) : a || e(t[2], "num", o), e(t[3], o, r(t[3])), l || a || f ? "bool" : "num";
-    }
-    e(t[1], "bool", r(t[1]));
-    const i = r(t[2]);
-    return e(t[3], i, r(t[3])), i;
   }
 }
-function d(n, e) {
+function f(n, t) {
   if (typeof n == "number") return String(n);
   if (typeof n == "string")
-    return w(O, n) ? String(O[n]) : (e[n] = 1, n);
-  if (n[0] == "fn") {
-    if (!w(k, n[1])) throw `"${n[1]}" 不是函数`;
-    if (k[n[1]] != -1 && k[n[1]] != n[2].length)
-      throw `需要 ${k[n[1]]} 个参数，但给了 ${n[2].length} 个`;
-    const r = n[2].map((t) => d(t, e)).join(", ");
-    return `Math.${n[1]}(${r})`;
-  }
-  if (n[0] == "un") return `(${n[1]}${d(n[2], e)})`;
-  if (n[0] == "bin") {
-    const r = d(n[2], e), t = d(n[3], e);
-    switch (n[1]) {
-      case "^":
-        return `(${r} ** ${t})`;
-      case "=":
-        return `Object.is(${r}, ${t})`;
-      case "==":
-        return `(${r} === ${t})`;
-      default:
-        return `(${r} ${n[1]} ${t})`;
+    return j(M, n) ? String(M[n]) : (t[n] = 1, n);
+  switch (n[0]) {
+    case "fn": {
+      if (!j(w, n[1])) throw `"${n[1]}" 不是函数`;
+      if (w[n[1]] != -1 && w[n[1]] != n[2].length)
+        throw `需要 ${w[n[1]]} 个参数，但给了 ${n[2].length} 个`;
+      const r = n[2].map((e) => f(e, t)).join(", ");
+      return `Math.${n[1]}(${r})`;
     }
+    case "un":
+      return `(${n[1]}${f(n[2], t)})`;
+    case "bin": {
+      const r = f(n[2], t), e = f(n[3], t);
+      switch (n[1]) {
+        case "^":
+          return `(${r} ** ${e})`;
+        case "->":
+          return `(!${r} || ${e})`;
+        default:
+          return `(${r} ${n[1]} ${e})`;
+      }
+    }
+    case "chain": {
+      const r = (e, s, i) => {
+        switch (e) {
+          case "=":
+            return `Object.is(${s}, ${i})`;
+          case "==":
+            return `(${s} === ${i})`;
+          default:
+            return `(${s} ${e} ${i})`;
+        }
+      };
+      return n[2].length == 1 ? r(n[2][0][0], f(n[1], t), f(n[2][0][1], t)) : `(($0, ${n[2].map((e, s) => `$${s + 1}`).join(", ")}) => ${n[2].map(([e], s) => r(e, `$${s}`, `$${s + 1}`)).join(" && ")})(${f(n[1], t)}, ${n[2].map(([, e]) => f(e, t)).join(", ")})`;
+    }
+    case "cond":
+      return `(${f(n[1], t)} ? ${f(n[2], t)} : ${f(n[3], t)})`;
   }
-  return `(${d(n[1], e)} ? ${d(n[2], e)} : ${d(n[3], e)})`;
 }
-function E(n) {
+function R(n) {
   try {
-    const e = {}, r = P(F(n));
-    return V(r), { kind: "ok", expr: d(r, e), args: Object.keys(e) };
-  } catch (e) {
-    return { kind: "err", e };
+    const t = {}, r = X(V(n));
+    return B(r), { kind: "ok", expr: f(r, t), args: Object.keys(t) };
+  } catch (t) {
+    return { kind: "err", e: t };
   }
 }
-const X = { key: 0 }, B = { key: 1 }, D = ["disabled"], W = ["disabled"], T = { key: 2 }, q = { key: 3 }, K = /* @__PURE__ */ R({
+const D = { key: 0 }, T = { key: 1 }, W = ["disabled"], q = ["disabled"], J = { key: 2 }, K = { key: 3 }, G = /* @__PURE__ */ O({
   __name: "Main",
   setup(n) {
-    const e = g("x + y = y + x"), r = g(E(e.value).args), t = I(() => E(e.value)), i = g(0), l = g(), a = g();
-    function f() {
-      if (t.value.kind == "err") return;
-      i.value = 0, r.value = t.value.args, l.value = void 0, o();
-      const u = new _();
-      a.value = u, u.postMessage([t.value.args, t.value.expr]), u.onmessage = ({ data: s }) => {
-        i.value = s.count, s.type == "fail" && (o(), l.value = s.arg);
+    const t = g("x + y = y + x"), r = g(R(t.value).args), e = S(() => R(t.value)), s = g(0), i = g(), a = g();
+    A(o);
+    function c() {
+      if (e.value.kind == "err") return;
+      s.value = 0, r.value = e.value.args, i.value = void 0, o();
+      const l = new P();
+      a.value = l, l.postMessage([e.value.args, e.value.expr]), l.onmessage = ({ data: u }) => {
+        s.value = u.count, u.type == "fail" && (o(), i.value = u.arg);
       };
     }
     function o() {
-      var u;
-      (u = a.value) == null || u.terminate(), a.value = void 0;
+      var l;
+      (l = a.value) == null || l.terminate(), a.value = void 0;
     }
-    return (u, s) => (b(), y(U, null, [
-      s[4] || (s[4] = v(" 表达式：")),
-      S(c("input", {
+    return (l, u) => (p(), y(L, null, [
+      u[4] || (u[4] = v(" 表达式：")),
+      _(m("input", {
         type: "text",
-        "onUpdate:modelValue": s[0] || (s[0] = (h) => e.value = h)
+        "onUpdate:modelValue": u[0] || (u[0] = (d) => t.value = d)
       }, null, 512), [
-        [A, e.value]
+        [C, t.value]
       ]),
-      s[5] || (s[5] = v("（结果为布尔值） ")),
-      t.value.kind == "ok" ? (b(), y("div", X, [
-        v(" 随机变量：" + $(t.value.args.join(", ")), 1),
-        s[1] || (s[1] = c("br", null, null, -1)),
-        s[2] || (s[2] = v(" 对应的 JS 代码：")),
-        c("code", null, $(t.value.expr), 1)
-      ])) : (b(), y("div", B, " 解析错误：" + $(t.value.e), 1)),
-      s[6] || (s[6] = c("hr", null, null, -1)),
-      c("button", {
+      u[5] || (u[5] = v("（结果为布尔值） ")),
+      e.value.kind == "ok" ? (p(), y("div", D, [
+        v(" 随机变量：" + b(e.value.args.join(", ")), 1),
+        u[1] || (u[1] = m("br", null, null, -1)),
+        u[2] || (u[2] = v(" 对应的 JS 代码：")),
+        m("code", null, b(e.value.expr), 1)
+      ])) : (p(), y("div", T, " 解析错误：" + b(e.value.e), 1)),
+      u[6] || (u[6] = m("hr", null, null, -1)),
+      m("button", {
         type: "button",
-        onClick: f,
-        disabled: t.value.kind == "err"
-      }, "开始测试", 8, D),
-      c("button", {
+        onClick: c,
+        disabled: e.value.kind == "err"
+      }, "开始测试", 8, W),
+      m("button", {
         type: "button",
         onClick: o,
         disabled: a.value == null
-      }, "停止测试", 8, W),
-      c("div", null, $(a.value ? "正" : "不") + "在运行，已执行 " + $(i.value) + " 次测试。 ", 1),
-      l.value != null ? (b(), y("div", T, [
-        s[3] || (s[3] = v(" 测试发现问题，参数： ")),
-        c("ul", null, [
-          (b(!0), y(U, null, C(l.value, (h, p) => (b(), y("li", null, [
-            c("code", null, $(r.value[p]) + " = " + $(Object.is(-0, h) ? "-0" : String(h)), 1)
+      }, "停止测试", 8, q),
+      m("div", null, b(a.value ? "正" : "不") + "在运行，已执行 " + b(s.value) + " 次测试。 ", 1),
+      i.value != null ? (p(), y("div", J, [
+        u[3] || (u[3] = v(" 测试发现问题，参数： ")),
+        m("ul", null, [
+          (p(!0), y(L, null, F(i.value, (d, k) => (p(), y("li", null, [
+            m("code", null, b(r.value[k]) + " = " + b(Object.is(-0, d) ? "-0" : String(d)), 1)
           ]))), 256))
         ])
-      ])) : (b(), y("div", q, " 测试暂未发现问题 "))
+      ])) : (p(), y("div", K, " 测试暂未发现问题 "))
     ], 64));
   }
 });
 export {
-  K as default
+  G as default
 };

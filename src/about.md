@@ -26,7 +26,7 @@ title: 关于我
 
 - [阿儿法营（稽木世界）](https://gitblock.cn/Users/1192266)
 
-- ~~[共创世界](https://www.ccw.site/student/60ba7f89fa5edd0db16995f6)~~<span :class="list.small">（不再使用）</span>
+- [共创世界](https://www.ccw.site/student/60ba7f89fa5edd0db16995f6)
 
 - ~~[Scratch官网](https://scratch.mit.edu/users/zengyl/)~~<span :class="list.small">（无法使用）</span>
 
