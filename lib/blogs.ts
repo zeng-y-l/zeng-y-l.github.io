@@ -1,4 +1,3 @@
-import { reject, map, pipe, propEq, sortBy } from 'rambda'
 import { createContentLoader } from 'vitepress'
 
 type Blog = {
@@ -10,15 +9,14 @@ type Blog = {
 }
 
 export default () => createContentLoader<Blog[]>('blog/*.md', {
-  transform: pipe(
-    map(({ url, frontmatter: fm }) => ({
+  transform: data => data
+    .map(({ url, frontmatter: fm }) => ({
       file: url.split('/').at(-1)!,
       title: fm.title,
       desc: fm.desc,
       create: fm.create,
       update: fm.update ?? fm.create,
-    })),
-    reject<Blog>(propEq('', 'file')), // index.md
-    sortBy(({ update }) => -Date.parse(update)),
-  ),
+    }))
+    .filter(({ file }) => file != '') // index.md
+    .sort((a, b) => Date.parse(b.update) - Date.parse(a.update))
 })

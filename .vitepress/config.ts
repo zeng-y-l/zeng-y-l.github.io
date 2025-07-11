@@ -4,7 +4,6 @@ import MdRuby from 'markdown-it-ruby'
 //1 @ts-ignore
 import MdUnderline from 'markdown-it-underline'
 import genRss from './rss'
-import { always } from 'rambda'
 
 // https://vitepress.dev/reference/site-config
 export default <UserConfig<{}>>{
@@ -25,9 +24,9 @@ export default <UserConfig<{}>>{
     config(md) {
       md.use(MdRuby)
         .use(MdUnderline)
-      
-      md.renderer.rules.table_open = always('<div class="table"><table>')
-      md.renderer.rules.table_close = always('</table></div>')
+
+      md.renderer.rules.table_open = () => '<div class="table"><table>'
+      md.renderer.rules.table_close = () => '</table></div>'
     },
     theme: {
       light: 'github-light',

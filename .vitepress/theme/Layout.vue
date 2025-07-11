@@ -2,7 +2,7 @@
 import { useData } from 'vitepress'
 import header from '../../lib/header.module.styl'
 import main from '../../lib/main.module.styl'
-import { all, connect, date } from '../../lib/utils'
+import { all, date } from '../../lib/utils'
 import { computed } from 'vue'
 import NotFound from './NotFound.md'
 import Nav from '../../lib/Nav.vue'
@@ -13,7 +13,7 @@ const information = computed(() => {
   const { create, update } = frontmatter.value
   return [
     [all`创建于 ${date(create)}`, all`最后修改于 ${date(update)}`],
-  ].map(x => connect(x, '，')).filter(x => x)
+  ].map(x => x.filter(x => x != null).join('，')).filter(x => x)
 })
 </script>
 

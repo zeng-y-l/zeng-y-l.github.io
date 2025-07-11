@@ -1,18 +1,18 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { scan } from './utils'
-import { last, init } from 'rambda'
 
 const props = defineProps<{
   path: string[],
   isDir: boolean,
 }>()
 
-const pathList = computed(() => scan(
-  init(props.path),
-  { label: '', path: '/' },
-  ({ path }, label) => ({ label, path: path + label + '/' }),
-))
+const pathList = computed(() => {
+  let path = '/'
+  return props.path.slice(0, -1).map(label => {
+    path += label + '/'
+    return { label, path }
+  })
+})
 
 </script>
 
@@ -29,7 +29,7 @@ const pathList = computed(() => scan(
       </template>
 
       <span :class="$style.sep">/</span>
-      <span>{{ last(path) }}</span>
+      <span>{{ path[path.length - 1] }}</span>
       <span v-if="isDir" :class="$style.sep">/</span>
     </div>
   </nav>
