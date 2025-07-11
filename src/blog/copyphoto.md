@@ -1,6 +1,7 @@
 ---
 title: PowerShell 拷照片
 create: 2024-11-07
+update: 2025-07-11
 desc: 用 PowerShell 把手机上的照片拷到电脑上并自动分类
 ---
 
@@ -51,7 +52,7 @@ if (($null -eq $root) -or (-not $root.IsFolder)) {
     throw "$id 不存在或不是文件夹"
 }
 
-$mdir = Read-Host "请输入手机上照片文件夹路径（如：内部存储/dcim/Camera）"
+$mdir = Read-Host "请输入手机上照片文件夹路径（如：内部存储/dcim/Camera 或 内部存储/Pictures/WeiXin）"
 foreach ($dir in $mdir.Split(@('/', '\'), [System.StringSplitOptions]::RemoveEmptyEntries)) {
     $root = $root.GetFolder.Items() |
     Where-Object Name -EQ $dir |
@@ -63,7 +64,7 @@ foreach ($dir in $mdir.Split(@('/', '\'), [System.StringSplitOptions]::RemoveEmp
 
 # 输入目标文件夹
 
-$path = Read-Host "请输入目标文件夹路径"
+$path = Read-Host "请输入目标文件夹路径（如 D:/Photo）"
 if (-not (Test-Path -Path $path)) {
     throw "路径不对"
 }
