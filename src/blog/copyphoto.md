@@ -1,7 +1,7 @@
 ---
 title: PowerShell 拷照片
 create: 2024-11-07
-update: 2025-07-11
+update: 2025-07-14
 desc: 用 PowerShell 把手机上的照片拷到电脑上并自动分类
 ---
 
@@ -30,6 +30,8 @@ desc: 用 PowerShell 把手机上的照片拷到电脑上并自动分类
 事实证明，重写脚本的决定是正确的。前段时间写完脚本，一运行，居然发现：以前的脚本拷的照片，修改日期全部都不对，刚好差了八个小时，显然是时区问题。用新的脚本重新拷一遍就正常了。
 
 我还有一些早期的照片，采用其他方式拷来，修改日期也不对，不过是与真实日期对比的（文件管理器「日期」栏）。于是又写了个脚本，批量给它改对，顺便也可以检测所有图片的修改日期有没有错。不过检测过程很慢，而且有些照片的真实日期已经丢失了，故拷贝时不靠真实日期来分类，只看修改日期（真正的原因：写脚本的时候根本不知道居然还有真实日期）。
+
+2025-07-14 补充：今天遇到个坑。数组用 `Where-Object` 过滤之后，长度（`.Count`）居然增加！调试后发现，若过滤后仅有一项，则会直接返回这一项，而非返回数组。需要用 `@()` 转换成数组再获取长度。
 
 附两个脚本，不保证能用：
 
@@ -119,7 +121,7 @@ $fmt = Read-Host "请输入分类文件夹格式（如：yyyy-MM）"
 $groups = $pics.Values |
 Group-Object -Property { Join-Path -Path $path -ChildPath $_.date.ToString($fmt) }
 $newgroups = $groups | Where-Object { -not (Test-Path $_.Name) }
-Write-Host "要拷到" $groups.Count "个文件夹中，其中要新建" $newgroups.Count "个"
+Write-Host "要拷到" @($groups).Count "个文件夹中，其中要新建" @($newgroups).Count "个"
 
 Read-Host "请按回车，开始新建文件夹"
 
