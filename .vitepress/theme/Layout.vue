@@ -36,7 +36,3 @@ const information = computed(() => {
     </main>
   </template>
 </template>
-
-<style lang="stylus" module>
-  @import '../../lib/design.styl'
-</style>

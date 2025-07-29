@@ -7,16 +7,18 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@types/node": "^24.0.13",
+    "@types/markdown-it-footnote": "^3.0.4",
+    "@types/node": "^24.1.0",
     "stylus": "^0.64.0",
     "vitepress": "1.6.3"
   },
   "dependencies": {
     "feed": "^5.1.0",
+    "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-ruby": "^1.1.2",
     "markdown-it-underline": "^1.0.1",
-    "vue": "^3.5.17"
+    "vue": "^3.5.18"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
