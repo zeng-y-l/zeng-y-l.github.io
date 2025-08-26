@@ -3,7 +3,7 @@ import { Theme } from 'vitepress'
 import Layout from './Layout.vue'
 import './style.styl'
 
-export default <Theme>{
+export default {
   Layout,
-}
+} satisfies Theme
 
