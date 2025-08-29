@@ -1,6 +1,6 @@
 ---
 title: 开新主页
-desc: 关于本主页的说明
+description: 关于本主页的说明
 create: 2023-07-12
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 用户定义字面量
+description: C++，User-defined literals（这是一篇旧文章，日期是后来的）
 create: 2023-07-01
-desc: C++，User-defined literals（这是一篇旧文章，日期是后来的）
 ---
 
 在[nlohmann/json](https://github.com/nlohmann/json)中，只需在字符串后写上`_json`即可自动转为json类型的变量。

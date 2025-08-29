@@ -1,7 +1,7 @@
 ---
 title: 用 Rust 手写词法分析的 DFA 解决 LeetCode 65
+description: 用编译原理，在 Rust 中，手写 DFA，解决 LeetCode 题目（这是一篇旧文章，日期是后来的）
 create: 2023-07-01
-desc: 用编译原理，在 Rust 中，手写 DFA，解决 LeetCode 题目（这是一篇旧文章，日期是后来的）
 ---
 
 前情提要：  

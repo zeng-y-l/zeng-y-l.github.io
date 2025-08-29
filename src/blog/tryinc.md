@@ -1,7 +1,7 @@
 ---
 title: C 实现 try
+description: longjmp 实现异常处理
 create: 2024-03-23
-desc: longjmp 实现异常处理
 ---
 
 # C 实现 try

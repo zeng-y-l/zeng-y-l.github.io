@@ -1,7 +1,7 @@
 ---
 title: 前端生成视频
+description: 通过 WebCodecs 在前端生成视频
 create: 2024-03-07
-desc: 通过 WebCodecs 在前端生成视频
 ---
 
 Web 的能力与日俱增。我发现，它竟然可以直接生成视频。只需提供每一帧的图片，就能生成 MP4。

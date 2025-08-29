@@ -1,8 +1,8 @@
 ---
 title: PowerShell 拷照片
+description: 用 PowerShell 把手机上的照片拷到电脑上并自动分类
 create: 2024-11-07
 update: 2025-07-14
-desc: 用 PowerShell 把手机上的照片拷到电脑上并自动分类
 ---
 
 我要把手机上的照片拷到电脑上，并按照日期分成文件夹，同时自动化这一过程。

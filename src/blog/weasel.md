@@ -1,7 +1,7 @@
 ---
 title: 小狼毫监控程序
+description: 用 AHK 自动重启小狼毫
 create: 2024-05-01
-desc: 用 AHK 自动重启小狼毫
 ---
 
 用 [RIME](https://rime.im/) 输入法，Windows 上即**小狼毫**。它有个大问题：经常莫名其妙就退出了，打字打不了，只好重新打开。

@@ -1,7 +1,7 @@
 ---
 title: HTML 转文本的坑
+description: innerText 的神奇特性
 create: 2024-11-10
-desc: innerText 的神奇特性
 ---
 
 HTML 转文本，怎么做？

@@ -1,7 +1,7 @@
 ---
 title: 编写「bf2wasm」
+description: 开发中用到的技术
 create: 2024-03-26
-desc: 开发中用到的技术
 ---
 
 写了个好玩的东西，[bf2wasm](https://zeng-y-l.github.io/project/bf2wasm)（[源码](https://gitee.com/Zeng_YL/bf2wasm)），可以把 Brainfuck 编译到 WASM 并运行。用了一些有趣的技术，本文简述之。

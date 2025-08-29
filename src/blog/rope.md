@@ -1,7 +1,7 @@
 ---
 title: JS 比 C++ 快
+description: 神奇的 Rope 结构
 create: 2025-01-02
-desc: 神奇的 Rope 结构
 ---
 
 一些人认为，C++ 永远比 JavaScript 快。这当然是错误的。即便代码逻辑一样，JavaScript 引擎也可以擅自做一些优化。

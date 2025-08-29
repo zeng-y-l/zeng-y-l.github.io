@@ -1,7 +1,7 @@
 ---
 title: 编写「集」
+description: 开发中的技术要点
 create: 2024-02-27
-desc: 开发中的技术要点
 ---
 
 近日，我发布了[「集」游戏](https://zeng-y-l.github.io/ji/)，及其[界面源码](https://gitee.com/Zeng_YL/ji-gui)与[训练源码](https://gitee.com/Zeng_YL/ji-train)。本文简述其技术要点。

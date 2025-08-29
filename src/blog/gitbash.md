@@ -1,7 +1,7 @@
 ---
 title: 解决 Git Bash 打开慢
+description: 解决一个神奇的问题
 create: 2024-11-01
-desc: 解决一个神奇的问题
 ---
 
 我在 Windows 11 上用 Git Bash。近日，发现终端打开很慢，原本只要不到一秒就能显示 prompt，现在要三五秒。在 VSCode 上更是慢得惊世骇俗，要七八秒才能打开。每个命令执行完，也要过一秒才能显示 prompt。忍无可忍，想着解决掉这个问题。

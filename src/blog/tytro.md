@@ -1,6 +1,6 @@
 ---
 title: tytro：类型上的尾递归优化
-desc: 有趣的实验
+description: 有趣的实验
 create: 2025-08-25
 ---
 

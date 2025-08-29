@@ -16,13 +16,13 @@ export default async function (site: SiteConfig) {
 
   const blogs = await getBlogs().load()
 
-  for (const { title, update, create, file, desc } of blogs) {
+  for (const { title, update, create, file, description } of blogs) {
     feed.addItem({
-      title: title,
+      title,
       link: '/blog/' + file,
       date: new Date(update),
       published: new Date(create),
-      description: desc,
+      description,
     })
   }
 

@@ -1,7 +1,7 @@
 ---
 title: Rust 前端初尝试
+description: 源神，启动！
 create: 2024-09-30
-desc: 源神，启动！
 ---
 
 Rust 信徒在前端搞出了不少名堂。受其影响，我也蠢蠢欲动，于是给前段时间写的一个小玩意儿 [base_any](https://lib.rs/crates/base_any) 用 Rust 写了个前端界面，效果在[这里](https://zeng-y-l.github.io/project/baseany.html)。

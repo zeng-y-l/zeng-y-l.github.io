@@ -28,7 +28,7 @@ const information = computed(() => {
     <header :class="header.header">
       <h1 :class="header.title">{{ frontmatter.title }}</h1>
       <div :class="header.info" v-for="info in information">{{ info }}</div>
-      <p v-if="frontmatter.desc" :class="[header.info, 'italic']">{{ frontmatter.desc }}</p>
+      <p v-if="frontmatter.description" :class="[header.info, 'italic']">{{ frontmatter.description }}</p>
     </header>
 
     <main :class="main.main">

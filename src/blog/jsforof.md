@@ -1,7 +1,7 @@
 ---
 title: JS 的 for..of
+description: 说说 JS 的 for..of（这是一篇旧文章，日期是后来的）
 create: 2023-07-01
-desc: 说说 JS 的 for..of（这是一篇旧文章，日期是后来的）
 ---
 
 本文将以我自己的理解方式，说说`for..of`到底是个啥（顺便地讲迭代器）。

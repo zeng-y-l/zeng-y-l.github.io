@@ -3,7 +3,7 @@ import { createContentLoader } from 'vitepress'
 type Blog = {
   file: string,
   title: string,
-  desc?: string,
+  description?: string,
   create: string,
   update: string,
 }
@@ -13,7 +13,7 @@ export default () => createContentLoader<Blog[]>('blog/*.md', {
     .map(({ url, frontmatter: fm }) => ({
       file: url.split('/').at(-1)!,
       title: fm.title,
-      desc: fm.desc,
+      description: fm.description,
       create: fm.create,
       update: fm.update ?? fm.create,
     }))

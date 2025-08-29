@@ -1,6 +1,6 @@
 ---
 title: Golang 显式实现接口
-desc: 用私有方法和嵌入做到显式实现接口
+description: 用私有方法和嵌入做到显式实现接口
 create: 2025-08-23
 ---
 

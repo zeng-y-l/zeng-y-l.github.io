@@ -7,7 +7,7 @@ title: 博客目录
 
 <a :href="blog.file">{{ blog.title }}</a> <span :class="list.small">{{ date(blog.update) }}</span>
 
-{{ blog.desc }}
+{{ blog.description }}
 
   </li>
 </ul>
