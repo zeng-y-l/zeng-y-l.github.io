@@ -28,6 +28,7 @@ html
   font-size calc(18px + 0.2vw)
   font-feature-settings "liga", "tnum", "calt", "zero"
   font-family "FullWidth", font-sans-prefer, font-sans-eng, font-sans-han, sans-serif
+  text-autospace normal
 
 body // 不用HTML，避免dark下的问题
   bg-color 1
@@ -82,13 +83,13 @@ blockquote
   border-left solid 0.25rem
   bd-color border-left-color
 
-img
+img, svg
   max-width 100%
   height auto
 
 figure
   vmargin 1.5rem
-  > img
+  > img, svg
     display block
     margin 0.5em auto
   > figcaption

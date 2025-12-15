@@ -1,5 +1,5 @@
 ---
-title: 《通规》速查
+title: 《通规表》速查
 ---
 
 速查《通用规范汉字表》的序号、级别、笔画数、繁体、异体。[这篇文章](../blog/tgdict)有介绍，[源码在这里](https://gitee.com/Zeng_YL/tgdict)，使用了[维基文库的数据](https://zh.m.wikisource.org/zh-hans/%E9%80%9A%E7%94%A8%E8%A7%84%E8%8C%83%E6%B1%89%E5%AD%97%E8%A1%A8)。

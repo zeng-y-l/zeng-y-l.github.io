@@ -4,6 +4,10 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [所有整数数列都有初等通项公式](https://gist.github.com/zeng-y-l/afdd222e79059ce0d3651fc53c87c98a)
+
+  照抄[这篇文章](https://zhuanlan.zhihu.com/p/375784472)，将之形式化。
+
 - [tytro](https://lib.rs/crates/tytro)
 
   类型上的尾递归优化。[源码](https://github.com/zeng-y-l/tytro)。（Rust 库）
@@ -35,7 +39,7 @@ title: 小玩意儿
   在球面里头画画。  
   可以看[源码](https://github.com/zeng-y-l/huntian)。
 
-- [《通规》速查](./tgdict)
+- [《通规表》速查](./tgdict)
 
   速查《通用规范汉字表》的序号、级别、笔画数、繁体、异体。  
   可以看[源码](https://gitee.com/Zeng_YL/tgdict)和[介绍文章](../blog/tgdict)。

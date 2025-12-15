@@ -1,11 +1,13 @@
 import { defineConfig } from 'vitepress'
+// @ts-ignore
 import MdRuby from 'markdown-it-ruby'
+// @ts-ignore
 import MdUnderline from 'markdown-it-underline'
 import MdFootnote from 'markdown-it-footnote'
+// @ts-ignore
 import MdFigure from 'markdown-it-image-figures'
 import genRss from './rss'
 import { Graphviz } from '@hpcc-js/wasm-graphviz'
-import { Buffer } from 'node:buffer'
 
 const graphviz = await Graphviz.load()
 
@@ -65,11 +67,10 @@ export default defineConfig({
       // graphviz 代码块
       md.renderer.rules.fence = (render => (tokens, idx, options, env, self) => {
         if (tokens[idx].info === 'dot') {
-          // 前面有xml标记，必须套一层base64
-          const svg = graphviz.dot(tokens[idx].content)
-          const base64 = Buffer.from(svg).toString('base64')
+          const svg = graphviz.dot(tokens[idx].content, 'svg_inline')
+          tokens[idx].attrJoin('class', 'graphviz')
           // https://www.npmjs.com/package/markdown-it-attrs
-          return `<figure${self.renderAttrs(tokens[idx])}><img src="data:image/svg+xml;base64,${base64}"></figure>`
+          return `<figure${self.renderAttrs(tokens[idx])}>${svg}</figure>`
         }
         return render(tokens, idx, options, env, self)
       })(md.renderer.rules.fence!)
