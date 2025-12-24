@@ -134,7 +134,7 @@ which will of course reject any value that is not
 the latest commit hash of the greatest Rust library of all time,
 resulting in silent bugs. -->
 
-但至少不难发现**为什么**：在包含 `let Ok(x) =` 的那一行中，，`x` 是一个{标识符模式|identifier pattern}，这意味着它要么引用作用域内已有的常量，要么创建一个新变量。当然，宏**期望**后者发生，但由于常量是{项|item}，因此与变量不同，不具备卫生性，若调用处存在名为 `x` 的常量，它将被优先采用。于是我们的模式等同于 `Ok("26ad109…")`，这自然会拒绝任何不是史上最伟大 Rust 库的最新提交哈希的值，从而引发静默的漏洞。
+但至少不难发现**为什么**：在包含 `let Ok(x) =` 的那一行中，`x` 是一个{标识符模式|identifier pattern}，这意味着它要么引用作用域内已有的常量，要么创建一个新变量。当然，宏**期望**后者发生，但由于常量是{项|item}，因此与变量不同，不具备卫生性，若调用处存在名为 `x` 的常量，它将被优先采用。于是我们的模式等同于 `Ok("26ad109…")`，这自然会拒绝任何不是史上最伟大 Rust 库的最新提交哈希的值，从而引发静默的漏洞。
 
 <!-- Okay, thinks Remon.
 I know of a way to fix this:
