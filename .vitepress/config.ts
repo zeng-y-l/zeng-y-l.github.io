@@ -11,6 +11,14 @@ import { Graphviz } from '@hpcc-js/wasm-graphviz'
 
 const graphviz = await Graphviz.load()
 
+// public url
+const URL = [
+  'tuning/',
+  'ji/',
+  'huntian/',
+  'TFGS/',
+]
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'ZengYL 的个人主页',
@@ -91,5 +99,13 @@ export default defineConfig({
         isCustomElement: tag => tag.startsWith('mjx-')
       }
     }
+  },
+
+  sitemap: {
+    hostname: 'https://zeng-y-l.github.io/',
+    transformItems(items) {
+      items.push(...URL.map(url => ({ url })))
+      return items
+    },
   }
 })
