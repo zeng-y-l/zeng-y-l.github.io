@@ -69,7 +69,10 @@ export default defineConfig({
 
       // 由于不提供判断外部链接的方法，也无法在添加target=_blank后改变href，只好文本替换
       md.renderer.rules.link_open = (render => (...args) =>
-        render(...args).replace('href="https://zeng-y-l.github.io/', 'href="/')
+        render(...args).replace(
+          // 域名为二者之一且路径非空
+          /href="https:\/\/(?:zeng-y-l\.github\.io|blog\.zengyulin\.cn)(\/[^"]+)"/u,
+          'href="$1"')
       )(md.renderer.rules.link_open!)
 
       // graphviz 代码块
