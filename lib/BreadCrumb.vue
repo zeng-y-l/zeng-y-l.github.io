@@ -18,8 +18,8 @@ const pathList = computed(() => {
 
 <template>
   <nav :class="$style.wrapper">
-    <a href="/">
-      <img :class="$style.icon" src="/icon.png">
+    <a href="/" title="首页">
+      <img alt="首页" :class="$style.icon" src="/icon.png">
     </a>
 
     <div :class="$style.path">

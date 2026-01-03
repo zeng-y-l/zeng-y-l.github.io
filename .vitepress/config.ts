@@ -33,7 +33,7 @@ export default defineConfig({
 
     // Inter 字体
     ['link', { rel: 'preconnect', href: 'https://rsms.me/' }],
-    ['link', { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css', media: 'print', onload: 'this.media="all"' }], // https://www.filamentgroup.com/lab/load-css-simpler/
 
     // Cloudflare Web Analytics
     ['script', { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "af175fc475a24a198fca38c3f8b89d9c"}' }],
