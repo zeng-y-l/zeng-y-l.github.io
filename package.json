@@ -13,6 +13,7 @@
     "vitepress": "1.6.4"
   },
   "dependencies": {
+    "@giscus/vue": "^3.1.1",
     "@hpcc-js/wasm-graphviz": "^1.17.0",
     "feed": "^5.1.0",
     "markdown-it-footnote": "^4.0.0",

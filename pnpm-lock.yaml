@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@giscus/vue':
+        specifier: ^3.1.1
+        version: 3.1.1(vue@3.5.25)
       '@hpcc-js/wasm-graphviz':
         specifier: ^1.17.0
         version: 1.17.0
@@ -305,6 +308,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@giscus/vue@3.1.1':
+    resolution: {integrity: sha512-xgsc93MibRQ0d1glBxN1BrEREHTIf3BPYs/3R+UZHNqawFFoWBV6iJ7uVCXMqoEKZdE2c78B3aKt5gfGqo8I5A==}
+    peerDependencies:
+      vue: '>=3.2.0'
+
   '@hpcc-js/wasm-graphviz@1.17.0':
     resolution: {integrity: sha512-EeQUvc41JrFU7AWkh3//KdgRT9waJrBxFA7H9m3uI/zAHzbvTgbw05tik+fxuDPD0sXRxc8g2kXqC5jMobWUQA==}
 
@@ -320,6 +328,12 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@lit-labs/ssr-dom-shim@1.5.0':
+    resolution: {integrity: sha512-HLomZXMmrCFHSRKESF5vklAKsDY7/fsT/ZhqCu3V0UoW/Qbv8wxmO4W9bx4KnCCF2Zak4yuk+AGraK/bPmI4kA==}
+
+  '@lit/reactive-element@2.1.2':
+    resolution: {integrity: sha512-pbCDiVMnne1lYUIaYNN5wrwQXDtHaYtg7YEFPeW+hws6U47WeFvISGUWekPGKWOP1ygrs0ef0o1VJMk1exos5A==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -493,6 +507,9 @@ packages:
 
   '@types/node@25.0.2':
     resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
+
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -777,6 +794,9 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  giscus@1.6.0:
+    resolution: {integrity: sha512-Zrsi8r4t1LVW950keaWcsURuZUQwUaMKjvJgTCY125vkW6OiEBkatE7ScJDbpqKHdZwb///7FVC21SE3iFK3PQ==}
+
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
     hasBin: true
@@ -820,6 +840,15 @@ packages:
 
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
+
+  lit-element@4.2.2:
+    resolution: {integrity: sha512-aFKhNToWxoyhkNDmWZwEva2SlQia+jfG0fjIWV//YeTaWrVnOxD89dPKfigCUspXFmjzOEUQpOkejH5Ly6sG0w==}
+
+  lit-html@3.3.2:
+    resolution: {integrity: sha512-Qy9hU88zcmaxBXcc10ZpdK7cOLXvXpRoBxERdtqV9QOrfpMZZ6pSYP91LhpPtap3sFMUiL7Tw2RImbe0Al2/kw==}
+
+  lit@3.3.2:
+    resolution: {integrity: sha512-NF9zbsP79l4ao2SNrH3NkfmFgN/hBYSQo90saIVI1o5GpjAdCPVstVzO1MrLOakHoEhYkrtRjPK6Ob521aoYWQ==}
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
@@ -1402,6 +1431,11 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@giscus/vue@3.1.1(vue@3.5.25)':
+    dependencies:
+      giscus: 1.6.0
+      vue: 3.5.25
+
   '@hpcc-js/wasm-graphviz@1.17.0': {}
 
   '@iconify-json/simple-icons@1.2.63':
@@ -1420,6 +1454,12 @@ snapshots:
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
+
+  '@lit-labs/ssr-dom-shim@1.5.0': {}
+
+  '@lit/reactive-element@2.1.2':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.5.0
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -1556,6 +1596,8 @@ snapshots:
   '@types/node@25.0.2':
     dependencies:
       undici-types: 7.16.0
+
+  '@types/trusted-types@2.0.7': {}
 
   '@types/unist@3.0.3': {}
 
@@ -1860,6 +1902,10 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  giscus@1.6.0:
+    dependencies:
+      lit: 3.3.2
+
   glob@10.5.0:
     dependencies:
       foreground-child: 3.3.1
@@ -1930,6 +1976,22 @@ snapshots:
   linkify-it@5.0.0:
     dependencies:
       uc.micro: 2.1.0
+
+  lit-element@4.2.2:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.5.0
+      '@lit/reactive-element': 2.1.2
+      lit-html: 3.3.2
+
+  lit-html@3.3.2:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@3.3.2:
+    dependencies:
+      '@lit/reactive-element': 2.1.2
+      lit-element: 4.2.2
+      lit-html: 3.3.2
 
   lru-cache@10.4.3: {}
 

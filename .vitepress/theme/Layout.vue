@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import header from '../../lib/header.module.styl'
 import main from '../../lib/main.module.styl'
 import { all, date } from '../../lib/utils'
 import { computed } from 'vue'
 import NotFound from './NotFound.md'
 import Nav from '../../lib/Nav.vue'
+import Giscus from '@giscus/vue'
 
-const { frontmatter, page } = useData()
+const { frontmatter, page, isDark } = useData()
+const route = useRoute()
 
 const information = computed(() => {
   const { create, update } = frontmatter.value
@@ -33,6 +35,14 @@ const information = computed(() => {
 
     <main :class="main.main">
       <Content />
+
+      <template v-if="/^\/blog\/./.test(route.path)">
+        <hr style="margin: 4rem 0;">
+
+        <Giscus id="comments" repo="zeng-y-l/zeng-y-l.github.io" repo-id="R_kgDOKAe5Eg" category="Announcements"
+          category-id="DIC_kwDOKAe5Es4C0a7Z" mapping="specific" :term="route.path" strict="1" reactions-enabled="1"
+          emit-metadata="0" input-position="top" :theme="isDark ? 'dark' : 'light'" lang="zh-CN" loading="lazy" />
+      </template>
     </main>
   </template>
 </template>
