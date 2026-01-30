@@ -4,6 +4,10 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
+- [Hacker News 评论获取](./hnshow)
+
+  从 [Algolia](https://hn.algolia.com/api) 获取 Hacker News 的评论区，便于访问。并有 Markdown 转换功能，以输入给大模型。可以看[源码](https://github.com/zeng-y-l/hnshow)。
+
 - [所有整数数列都有初等通项公式](https://gist.github.com/zeng-y-l/afdd222e79059ce0d3651fc53c87c98a)
 
   照抄[这篇文章](https://zhuanlan.zhihu.com/p/375784472)，将之形式化。
