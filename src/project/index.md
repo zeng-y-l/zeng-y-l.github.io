@@ -4,7 +4,11 @@ title: 小玩意儿
 
 一些作品不列于此处。其他网站、社区中，有不少我的零散作品，如阿儿法营、Gitee。也有的存于原网站服务器上，或因迁移困难且价值不大，故不再服务。
 
-- [无限魔方](/infcube/)
+- [UTAU 项目文件](https://github.com/zeng-y-l/my-utau-project)
+
+  公开我发在哔哩哔哩等网站的 UTAU 视频的项目文件。
+
+- [无限魔方](/infcube/){target=_blank}
 
   一直在转的魔方！同一个时间的状态总是相同的。可以看[源码](https://github.com/zeng-y-l/infcube)。
 
