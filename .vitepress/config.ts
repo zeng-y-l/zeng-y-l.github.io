@@ -17,6 +17,7 @@ const URL = [
   'ji/',
   'huntian/',
   'TFGS/',
+  'infcube/',
 ]
 
 // https://vitepress.dev/reference/site-config
@@ -36,12 +37,7 @@ export default defineConfig({
     ['link', { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css', media: 'print', onload: 'this.media="all"' }], // https://www.filamentgroup.com/lab/load-css-simpler/
 
     // Cloudflare Web Analytics
-    ['script', { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "af175fc475a24a198fca38c3f8b89d9c"}' }],
-    ['script', {}, `(${() => {
-      if (location.hostname.endsWith('zengyulin.cn')) {
-        (document.head.children[document.head.children.length - 2] as HTMLElement).dataset.cfBeacon = '{"token": "33c79cfa0af041408e10f3ca26a09879"}'
-      }
-    }})()`]
+    ['script', { defer: '', src: 'https://static.cloudflareinsights.com/beacon.min.js', 'data-cf-beacon': '{"token": "af175fc475a24a198fca38c3f8b89d9c"}' }]
   ],
   transformPageData(pageData) {
     // 主站 https://vitepress.dev/zh/reference/site-config#transformhead
